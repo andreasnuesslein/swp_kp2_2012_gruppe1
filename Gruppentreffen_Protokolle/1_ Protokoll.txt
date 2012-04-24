@@ -1,0 +1,83 @@
+agenda 
+
+1. Fragenkatalog erstellen
+2. Interviewplan
+3. Sonstiges
+
+
+1. Fragenkatalog
+
+	Generelle Reisegewohnheiten
+	- Wie oft Reisen sie in der Woche?
+	- Wohin reisen sie?
+	- Welche Verkehrsmittel benutzen sie aus welchem Grund?
+		- Würden sie lieber mit anderen Verkehrsmitteln reisen? Welche?
+		- Was denken sie über das Autofahren? Selbst fahren? Fahrtgruppe?
+		- Was denken sie über das Busfahren?
+		- Was denken sie über das Radfahren?
+		- Was denken sie über das Taxifahren?
+		- Was denken sie über das Bahnfahren?
+		- Was denken sie über das Fliegen?
+	
+	Reiseverhalten
+	- Reisen sie lieber in der Gruppe oder allein?
+	- Wie verbringen sie ihre Zeit während der Reise?
+		- Arbeiten sie?
+		- Essen sie?
+		- Telfonieren sie?
+	- Wie lange möchten sie sich beim Umsteigen Zeit nehmen?
+	- Wie oft benötigen sie einen Sicherheitspuffer?
+	
+	Erfahrungsberichte
+	- Berichten sie den Ablauf ihrer letzten Reisen?
+	- Wie verlief ihre aus ihrer Sicht beste Reise?
+	- Wie verlief ihre aus ihrer Sicht schlechteste Reise?
+	
+	Buchung und Abrechnung
+	- Wie finden sie das Abrechnungssystem der Carmeq?
+	- Welche Medien benutzen sie für die Reiseplanung (-durchführung)?
+	- Wie weit im Vorraus planen sie ihre Reise?
+	- Wie läuft die Bezahlung?
+	- Was würden sie an der jetzigen Situation verändern, wenn sie könnten?
+	- Wie bewerten sie diese? Was stört sie? Was finden sie gut?
+	
+	Technische Aspekte
+	- Über welche Multimediageräte verfügen sie?
+	- Wie viele Routenalternativen würden sie als passend empfinden?
+	- Wie wichtig ist ihnen die Verfolgung ihrer aktuellen Position auf einer Karte?
+		- Würden sie sich wünschen, dass andere Mitarbeiter ihre Position einsehen können?  
+
+	Persönliches
+	- Sind sie verheiratet?
+	- Haben sie Kinder?
+	- Wie reisen sie im privaten Bereich?
+	
+	- Haben wir noch irgendetwas unerwähnt gelassen oder möchten sie uns noch irgendetwas mitteilen? 
+	
+	- Und zum Abschluss: Sind sie Batman (bzw. Catwoman)?
+	
+	
+2. Vorgehen Interview
+    Einleitung
+	- Vorstellung des Interviewer
+	- Vorstellung des Protokollanten
+	- Situation (FU - SWP - CarMob)
+	- Frage ob die Aufnahme des Gesprächs genehmigt wird?
+	- Hinweis auf umfassendes Beantworten der Fragen (Alles was als wichtig betrachtet wird, soll erzählt werden)
+	- Vorgehen: Fragen, Zusammenfassung am Ende 
+	
+	Fragen
+	
+	Wiederholung der wichtigsten Punkte
+	- Zusammenfassung
+	- Dankeschön
+
+3. Sonstiges
+ Email - Andreas, Traczugang 
+ ToDo: Wikiseite im Trac für Kontaktdaten
+ Problem: Einerseits offen lassen, andererseits keine Manipulation
+ 
+ Gruppeneinteilung + Zeitplanung:
+	Gruppe A) Tu, Tom  (Linke Seite im Plan)
+	Gruppe B) Mareike, Sebastian (Rechte Seite im Plan)
+	Remark: Andreas kann sich Gruppe aussuchen.
