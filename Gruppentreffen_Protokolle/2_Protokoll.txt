@@ -1,0 +1,58 @@
+Agenda
+1. Erneute (digitale) Klassifizierung der Stories, unter Berücksichtigung aller Aspekte.
+2. Brainstorming zur Persona und zum POV (bzw. Zusammentragen der Vorarbeiten der einzelnen Gruppenmitgliedern)
+3. Ausarbeiten der Persona und des POVs
+4. Sonstiges
+
+
+2. Brainstorming Persona + POV
+
+	Persona A) BC 50
+		- Wohnt in Kreuzberg, Nähe Südstern
+		
+		- Reiseplanung im Voraus (min. 1 Tag)
+		- Bucht am Vortag Ticket + Reservierung im Spider
+		- Via U-Bahn bis Mehringdamm, dann Umsteigen in die U6 bis Friedrichstraße, dann S-Bahn bis Hbhf
+		- Holt sich sein Ticket aus dem Automaten
+		- Kauft sich ein Brötchen und einen Kaffee
+		- Geht in die DB-Lounge, um sein Emailpostfach zu aktualisieren
+		- Bis der Zug kommt wird sich die Zeit mit dem Schauen der neusten Nachrichten vertrieben (15min)
+		- ICE Richtung Wolfsburg(7:48)
+		- Suchen des Platzes
+		- Arbeiten im Zug, glücklicherweise Abteil ohne Telfonbenutzung (==> Ruhe, produktive Arbeit)
+		- Telefonat muss getätigt werden, weil ein Kunde einen zusätzlichen Termin für den Nachmittag haben möchte (steht in der vorletzten Mail) => Details klären per Telefon
+		- Laptop wird zugeklappt und mit Laptop, Jacke und Tasche gerüstet geht es ab durch 4 Wagons richtung Telefonbereich (=> gestresst)
+		- Auf Rückweg zum Platz wird ein Kollege getroffen, dabei wird sich verabredet sich das Taxi zum VW Werk zu teilen
+		- Bei Rückkehr sitz jemand Fremdes auf dem Platz (=> 5 min in der Tasche nach der Reservierung suchen, dann wieder sitzen)
+		- Restliche Emails werden gecheckt und 10 Minuten vor Ankunft wird sich bereit gemacht für den Taxisprint
+		- Nachdem der Kollege das Taxi als erstes erreicht werden noch schnell zwei weitere Mitfahrer arangiert und ab gehts zum Werk
+		- Im Werk werden alle technischen Geräte eingeschlossen und die Arbeit beginnt
+		
+		- Nach dem verschobenen Termin um 17.50 wird sich beeilt, weil die Bahn um 18.18 erreicht werden soll
+		- Taxi vor dem Werk fährt genau weg als Person aus dem Werk kommt
+		- Neues Taxi bestellen (am Empfang)
+		- 10 min warten, Telefonieren mit Freundin bzgl. Verspätung
+		- nach 10 min alleine im Taxi zum Bahnhof
+		- Ankunft: 18.20 => Bahn gerade verpasst
+		- Warten bis 19.04, ab gehts zum Essen und Feierabend-Bierchen im Bistro (allerdings kocht die Freundin also ist der Hunger noch nicht ganz gestillt)
+		- ICE kommt, die Suche nach dem Sitzplatz endet Erfolglos => Sitzen im Bistro => Geld ausgeben, schlechte Laune
+		- ICE kommt am HBhf an, Freundin holt ihn nicht wie sonst ab weil um 20.15 Dirty Dancing anfängt => also ab Richtung Schönhauser Allee
+		- S-Bahn bis Alex => U2 bis Schönhauser Allee  => Fußweg zur Freundin
+		- Weil seine Freundin den Film schaut aktualisiert er sofort die Tabelle für Reisen
+
+		
+		-POV
+			- Vorgang der Reservierung für BC 100 Fahrer vereinfachen, sodass spontane Reservierungen ermöglicht werden
+			- Aufzeichnung der getätitigten Reisen auf dem mobilen endgerät, sodass eine Art persönliches Reisetagebuch erstellt wird
+			- Exportieren des Reisetagebuchs in die Excelliste zum Abrechnen der Reisekosten
+			- Quittungen digitalisieren, um die Bürokratie zu mininieren
+			- Gruppenbezogene Koordinationsmöglichkeit zum Taxisharing an den verschiedenen Standorten
+			- Buchungsvorgang kann nicht beeinflusst werden, da er auf dem Spidersystem auftaucht
+			
+4. Sonstiges
+- Beschluss verwendung von github (=> Wiki ins Git) + Einrichtung
+- TODOS: 
+	1. Digitalisieren des SSC-Clusters (Tom, bubbl.us)
+	2. 1. Persona ausformulieren (Basti)
+	3. 2. Persona erstellen (BC 100) (Maiky)
+	4. Wiki migrieren (Tu)
