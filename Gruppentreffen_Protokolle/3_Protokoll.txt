@@ -1,0 +1,51 @@
+Agenda
+1. Diskussion nochmals über das Brainstorming
+2. Überlegung welche zwei Lösungen am Fr präsentiert werden
+3. Vorbereiten der Präsentationen
+4. Projektplanung
+5. Sonstiges
+
+1.
+- Diskussion und Recherche über WLAN im Zug -> schwierig zu bestimmen, wie weit das WLAN Netz von einem Handy reicht ~ 100m
+- Diskussion über andere Kommuniaktionsmöglichkeiten
+- Diskussion über Reservierungen (App? Bahnapp?) -> Verworfen (DB - Tickets)
+
+2. & 4.
+- Lösung 1: Kommunikation während der Zugfahrt zum Teilen einer Weiterfahrtsmöglichkeit
+  - Im Zug selbst wählt sich der Nutzer über das Internet auf einem Webservice ein (Schritt 1. Webseite; Schritt 2. App)
+  - Es gibt nun zwei Möglichkeiten:
+		* er gibt an wohin er heute reisen will (zB. Wolfsburg - Rügenkamp), falls sich heute noch keiner angemeldet hat
+		* er sieht wohin andere Mitarbeiter reisen wollen und kann sich dann in dieser Listen einwählen
+  - Vor der Ankunft des Zuges wird allen mitarbeitern die Gruppe an Personen, mit denen sie sich ein Taxi teilen, und der Treffpunkt angezeigt
+  - Je nach Verfügbarkeit kann das Taxi vorher automatisch online bestellt werden oder muss von einem der Teilnehmer (der benachrichtigt wird) angerufen werden 
+  - Optional können noch weitere Verkehrsmittel, wie Carsharing oder öffentlicher Naheverkehr hinzugefügt werden
+  
+  PP:
+	- MS2: Webservice erstellen (Anmelden, Listen, etc.)
+	- MS3: Taxierweiterung implementieren
+	- MS4: Zugriff auf den Webservice per App 
+	- MS5: Optimierung, Optionale Features und Test
+  
+- Lösung 2: Erleichterung der Bürokratie zum Abrechnen der Reise
+  - Zugriff auf die Outlook-Termine des jeweiligen Nutzers -> Benachrichtigung an das jeweilige Handy, wenn neuer Termin erstellt (WebService? - VBA Maiky?)
+  - jeder Mitarbeiter hat sein Reiseprofil (-> Arbeitssitz kann herausgefunden werden) => Termine die Reise benötigen werden an Handy versandt
+  - Liegt ein Termin an, wird eine gewisse Zeit vorher (zB. 3 Std bei Berlin Richtung Wolfsburg) die Position des Handys bestimmt
+  - Reisetagebucheintrag erstellen und im Speichern halten
+  - Der Nutzer hat die Möglichkeit die App zu öffnen und einen Export anzustoßen, der eine Excelliste generiert (Reisekostenabrechnung)
+  - vorerst nur Androidgeräte
+  - optional Digitalisieren der Belege
+  
+  PP:
+	- MS2: Outlookexport der Termine ?-> snychronisation ein muss?
+	- MS3: Basisversion der App
+	- MS4: Bugfixing, Export nach Excel
+	- MS5: Optimierung, Optionale Features und Test
+	
+  3. 
+	- Einleitung und Vorstellung der Mitarbeiter ~ 1min
+	- kurze Zusammenfassung Interviews + Persona + POV ~ 4min
+    - Vorstellung Lösung 1 ~ 5min
+    - Vorstellung Lösung 2 ~ 5min	
+	
+  5. 
+    - Einrichtung der EGit Zugänge für Tom und Tu
