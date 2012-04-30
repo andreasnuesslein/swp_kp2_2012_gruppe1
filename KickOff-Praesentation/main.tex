@@ -1,0 +1,102 @@
+\documentclass[ucs,10pt]{beamer}
+
+
+\usepackage[utf8x]{inputenc}    % to make utf-8 input possible
+\usepackage[english]{babel}     % hyphenation etc., alternatively use 'german' as parameter
+\usepackage{wrapfig}
+
+\include{fu-beamer-template}  % THIS is the line that includes the FU template!
+
+\usepackage{arev,t1enc} % looks nicer than the standard sans-serif font
+% if you experience problems, comment out the line above and change
+% the documentclass option "9pt" to "10pt"
+
+% image to be shown on the title page (without file extension, should be pdf or png)
+\titleimage{images/cah.png}
+
+\title{Titel für Team1}
+
+\author{Tom Bullmann \& Andreas Nüßlein \& Sebastian Schulz \& Tu Tran \& Mareike Ziese}
+
+\institute[FU Berlin] % (optional, but mostly needed)
+{Freie Universität Berlin}
+
+\subject{Softwareproject}
+
+\renewcommand{\footlinetext}{\insertshortinstitute, \insertshorttitle, \insertshortdate}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+%\AtBeginSection[]
+%{
+%  \begin{frame}<beamer>
+%    \tableofcontents[currentsection,currentsubsection]
+%  \end{frame}
+%}
+
+\def\blfootnote{\xdef\@thefnmark{\@footnotetext}}
+
+\definecolor{Darkgreen}{rgb}{0,0.4,0}
+
+% new itemize environment with itemsep parameter
+\newenvironment{myitemize}[1][0]
+  { \begin{itemize}
+    % set spacing between items
+    \addtolength{\itemsep}{#1\baselineskip}
+    % set spacing between lines
+    \addtolength{\baselineskip}{#1\baselineskip} }
+  { \end{itemize} }
+
+\begin{document}
+
+	\begin{frame}[plain]
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{Outline}
+		\tableofcontents
+	\end{frame}
+
+
+\input{intro}
+
+
+\appendix
+
+\begin{thebibliography}{10}
+
+\beamertemplatebookbibitems
+  % Start with overview books.
+
+\beamertemplatearticlebibitems
+  % Followed by interesting articles. Keep the list short. 
+\footnotesize
+	\bibitem{Burns2008}
+	Burns, J. (2008)
+	\newblock Developing Secure Mobile Applications for Android -- An Introduction to Making Secure Android Applications
+	\newblock http://www.isecpartners.com/white-papers/2010/7/22/developing-secure-mobile-applications-for-android.html [20.03.2012]
+
+	\bibitem{Enck2009}
+	Enck, W. et al. (2009)
+	\newblock Understanding Android Security
+	\newblock IEEE Security and Privacy, v.7 n.1, p.50-57, January 2009
+	\newblock DOI 10.1109/MSP.2009.26
+
+ \end{thebibliography}
+\end{document}
+
+
+%% neues wort immer rot.
+%		\begin{frame}
+%			\begin{itemize}
+%
+%				\item <+-| alert@+> Robert De Niro
+%
+%				\item <+-| alert@+> Brian De Palma
+%
+%				\item <+-| alert@+> Gerard Depardieu
+%
+%				\item <+-| alert@+> Tux
+%
+%			\end{itemize}
+%		\end{frame}
