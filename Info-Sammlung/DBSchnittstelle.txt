@@ -1,0 +1,7 @@
+DB -Schnittstelle :
+
+http://www.myway.de/e.lauterbach/auskunft/fplan.html
+
+
+Die Seite wird per Post/Get Variablen angezapft, recht einfach
+
