@@ -12,14 +12,14 @@ Agenda
 	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Mitfahrt, damit man um 19.10 mit dem Zug weiterfahren kann)
 	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00)
 	- Aus Reise austragen (Website) - Austragen aus Reise mit Uschi
-	- Registrieren (App)(nicht relevant)
-	- Anwenden (App) (TODO)
+	- Registrieren (App)
+	- Anwenden (App) 
 	
 2. Entwickeln der Paper Prototypes
 
 3. Formulieren der Aufgaben
-(TODO)
-	3.1) Aufgabe #: <Registrieren> 
+
+	3.1) Aufgabe #: <Registrieren (Website)> 
 	
 		Ziel/Ergebnis: Eintragen von Benutzername, Name und PW
 		Annahmen: --keine--
@@ -39,20 +39,38 @@ Agenda
 		
 	3.3) Aufgabe #: <Anwenden 2 (Website)> 
 	
-		Ziel/Ergebnis:  Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00)
+		Ziel/Ergebnis:  Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00, 30 Min. Dauer)
 		Annahmen: Registriert sein
 		Schritte: Reise aussuchen, Mitfahrt wählen	
-		Geschätzte Zeit: 5 min
+		Geschätzte Zeit: 3 min
 		Hinweise für den Nutzer: Carmeq freut sich, wenn Geld gespart wird. 
 		Bemerkungen: --keine--
 			
-	3.4) Aufgabe #: <Anwenden 2 (Website)> 
+	3.4) Aufgabe #: <Löschen einer Reise (Website)> 
 	
 		Ziel/Ergebnis:  Aus Reise austragen (Website) - Austragen aus Reise mit Rosi
 		Annahmen: Eingeloggt sein, Reise mit Rosi gebucht
 		Schritte: Reise löschen, Löschung bestätigen	
 		Geschätzte Zeit: 1 min
 		Hinweise für den Nutzer: --keine-- 
+		Bemerkungen: --keine--
+	
+	3.5) Aufgabe #: <Registrieren (App)> 
+	
+		Ziel/Ergebnis: Eintragen von Benutzername, Name und PW
+		Annahmen: --keine--
+		Schritte: Formulare ausfüllen
+		Geschätzte Zeit: 1 min
+		Hinweise für den Nutzer: --keine--  
+		Bemerkungen: --keine--
+	
+	3.6) Aufgabe #: <Anwenden (App)> 
+	
+		Ziel/Ergebnis: Taxifahrt Carmeq - Hbf. (man muss um 19.10 mit dem Zug weiterfahren)
+		Annahmen: Registriert sein
+		Schritte: Reise aussuchen, Mitfahrt wählen	
+		Geschätzte Zeit: 4 min
+		Hinweise für den Nutzer: Carmeq freut sich, wenn Geld gespart wird. 
 		Bemerkungen: --keine--
 		
 		
