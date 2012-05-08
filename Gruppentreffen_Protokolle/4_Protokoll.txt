@@ -1,0 +1,34 @@
+Agenda
+1. Herausfiltern der Aufgaben
+2. Entwickeln der Paper Prototypes
+3. Formulieren der Beschreibungen
+4. Aufteilung der Rollen
+5. Testen
+6. Sonstiges
+
+1. Herausfiltern der Aufgaben
+	- Registrieren (Website) - Eintragen von Benutzername, Name und PW
+	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Mitfahrt, damit man um 19.10 mit dem Zug weiterfahren kann)
+	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00)
+	- Aus Reise austragen (Website) - Austragen aus Reise mit Uschi
+	- Profil ändern (Website) - Ändern der Handynummer 
+	- Registrieren (App)
+	- Anwenden (App)
+	
+2. Entwickeln der Paper Prototypes
+
+3. Formulieren der Beschreibungen
+
+4. Aufteilung der Rollen
+	- Computer: Tu, Mareike (Hilfe -> Sortiert Zettel)
+	- Beobachter: Tom, Sebastian
+	- Moderator: Andreas 
+
+6. Sonstiges
+	Ideen für die Implementierung:
+	- Treffpunkt Link nach GoogleMaps
+	- Email wenn Mitfahrer sich zu Reise hinzufügen
+	- optional private Fahrt (weil konfortabel)
+	- Editieren der Einträge in der Reisetabelle (-> Mails? Eigene Gruppen?)
+	- Orte die nicht mehr benutzt werden, fliegen am Monatsende raus
+	- eingeloggt bleiben
