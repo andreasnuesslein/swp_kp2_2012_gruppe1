@@ -4,27 +4,67 @@ Agenda
 3. Formulieren der Beschreibungen
 4. Aufteilung der Rollen
 5. Testen
-6. Sonstiges
+6. Zeitplanung für Freitag
+7. Sonstiges
 
 1. Herausfiltern der Aufgaben
 	- Registrieren (Website) - Eintragen von Benutzername, Name und PW
 	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Mitfahrt, damit man um 19.10 mit dem Zug weiterfahren kann)
 	- Anwenden (Website) - Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00)
 	- Aus Reise austragen (Website) - Austragen aus Reise mit Uschi
-	- Profil ändern (Website) - Ändern der Handynummer 
-	- Registrieren (App)
-	- Anwenden (App)
+	- Registrieren (App)(nicht relevant)
+	- Anwenden (App) (TODO)
 	
 2. Entwickeln der Paper Prototypes
 
-3. Formulieren der Beschreibungen
-
+3. Formulieren der Aufgaben
+(TODO)
+	3.1) Aufgabe #: <Registrieren> 
+	
+		Ziel/Ergebnis: Eintragen von Benutzername, Name und PW
+		Annahmen: --keine--
+		Schritte: Formulare ausfüllen
+		Geschätzte Zeit: 1 min
+		Hinweise für den Nutzer: --keine--  
+		Bemerkungen: --keine--
+	
+	3.2) Aufgabe #: <Anwenden 1 (Website)> 
+	
+		Ziel/Ergebnis: Taxifahrt Carmeq - Hbf. (man muss um 19.10 mit dem Zug weiterfahren)
+		Annahmen: Registriert sein
+		Schritte: Reise aussuchen, Mitfahrt wählen	
+		Geschätzte Zeit: 4 min
+		Hinweise für den Nutzer: Carmeq freut sich, wenn Geld gespart wird. 
+		Bemerkungen: --keine--
+		
+	3.3) Aufgabe #: <Anwenden 2 (Website)> 
+	
+		Ziel/Ergebnis:  Taxifahrt Carmeq - Hbf. (Selbsterstellen, Abfahrt mit dem Zug von Berlin Spandau um 11.00)
+		Annahmen: Registriert sein
+		Schritte: Reise aussuchen, Mitfahrt wählen	
+		Geschätzte Zeit: 5 min
+		Hinweise für den Nutzer: Carmeq freut sich, wenn Geld gespart wird. 
+		Bemerkungen: --keine--
+			
+	3.4) Aufgabe #: <Anwenden 2 (Website)> 
+	
+		Ziel/Ergebnis:  Aus Reise austragen (Website) - Austragen aus Reise mit Rosi
+		Annahmen: Eingeloggt sein, Reise mit Rosi gebucht
+		Schritte: Reise löschen, Löschung bestätigen	
+		Geschätzte Zeit: 1 min
+		Hinweise für den Nutzer: --keine-- 
+		Bemerkungen: --keine--
+		
+		
 4. Aufteilung der Rollen
 	- Computer: Tu, Mareike (Hilfe -> Sortiert Zettel)
 	- Beobachter: Tom, Sebastian
 	- Moderator: Andreas 
 
-6. Sonstiges
+6. Zeitplanung für Freitag 
+	Die genannten Aufgaben mit geschätzter Zeit nacheinander durchgehen.
+
+7. Sonstiges
 	Ideen für die Implementierung:
 	- Treffpunkt Link nach GoogleMaps
 	- Email wenn Mitfahrer sich zu Reise hinzufügen
