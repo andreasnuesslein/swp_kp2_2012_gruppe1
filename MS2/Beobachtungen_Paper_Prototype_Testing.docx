@@ -1,0 +1,91 @@
+﻿Test 1, Stefan Schulz:
+
+Website:
+
+ist eine Registrierung nötig? Vom Tester anders gewünscht
+E-Mail, Passwort, Firmentelephonnummer und Namen aus dem VW-Konto nutzen → automatisch erstellte Konten mit Mitarbeiterdaten aus bestehendem Datenbestand gewünscht
+Ansicht der “aktiven Reisen” ist verwirrend
+“aktive Reisen” gedrückt → verwirrende Namensgebung
+von Berlin gewählt → da gerade im Zug, vielleicht Namensgebung anpassen(z.B. Taxiabfahrtsort oder dergleichen)
+Tracking des Standortes gewünscht → educated guesses vorgeschlagen, anhand vorheriger Reisen und Uhrzeiten die Wahrscheinlichkeit des aktuellen Standortes bestimmen, um z.B. VPN-Zugang zu umgehen der fehlleiten würde
+Vorauswahl bei Ortswahl gewünscht → default per bisher getätigter Reisen um schnelle Auswahl treffen zu können
+Taxibestellung auf einen Namen, da Taxifahrer wohl einen Namen brauchen zur Identifizierung → in Bestätigungsnachricht einbeziehen
+Taxistandort mit angeben, eventuell separaten Standort von restlichen Taxis um Verwirrung zu meiden → Treffpunkt/Kommentar nicht wie gedacht genutzt, vielleicht eine Trennung in separate Felder nützlich zur besseren Identifizierung
+bei Rückfahrt Standort merken
+Kontaktdaten mit in die Bestätigungsnachricht
+Bestätigung auch/nur per SMS
+
+App:
+
+“Aktive Reisen” sind verwirrend → umgestalten oder Information geben
+Tracking auf dem Handy als selbstverständlich empfunden
+Reiseauswahl als Hauptelement empfunden → Liste mit ativen Reisen würde als aufrufbare Option ausreichen, so bliebe die Planung der Taxireisen als wichtigstes Merkmal immer sichtbar
+
+Generelles Feedback:
+
+die Auswahllisten gleichzeitig anzeigen, damit voreingestellte Route z.B. Von WOB-Hbf-Werk4 direkt gewählt werden kann ohne weitere Auswahl
+Listen an Nutzer anpassen
+neuer Standrt für alle User sichtbar machen
+App-Version gefällt besser als die Website
+
+
+
+Test 2, Susanne:
+
+Website:
+
+Registrieren ist Ok, Tester begann jedoch mit dem Login → vielleicht klarer hervorheben um den Unterschied klar zu stellen
+“aktive Reisen” verwirren → umbenennen
+Standortwahl verwirrend → da der Von-Ort als Abreiseort der Zugfahrt angenommen wird, vielleicht besser erläutern, z.B. “Taxifahrt von:”
+E-Mail-Erhalt verwundert → extra das Mailprogramm nutzen zu müssen wird als lästig empfunden
+Kommentare/Treffpunkt ungenau genutzt, verwendet wurde in etwa: Hallo ich bin Susanne und fahre nach A, wer möchte mit. → Spezifizierung vielleicht hilfreich
+Bestätigen/Abbrechen in der Bestätigungsmail verwirrt sehr → besser erläutern was deren Bedeutung ist
+Löschen sehr einfach
+E-Mail zur Bestätigung überdenken
+Listen 1,2 und 3 nacheinander als gut empfunden
+Liste 3(nach:) verwirrt durch gleichzeitiges hervor kommen der Liste mit vorhandenen Reisen → Filtereffekt nicht wahr genommen
+neue Reise als Link nicht für gut empfunden, das vorhandene Plus wurde stattdessen genutzt(Link nicht einmal wahr genommen)
+
+App:
+
+Status: In Bearbeitung sollte vielleicht mit einem Popup oder ähnlichem erklärt werden, srgte für etwas Verwunderung
+
+Generelles Feedback:
+
+favorisierte Mitfahrer merken(und vielleicht bewerten) → Buddy-icon hinter deren Reise zur besseren Identifizierung, um so mehr Mitfahrkriterien zu haben
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Test 3, Söhnke:
+
+Website:
+
+Tabelle mit vorhandenen Reisen nicht anzeigen wenn keine Einträge vorhanden sind
+
+App:
+
+Startbildschirm wurde fragend registriert → vermutlich neu gestalten, Vorschlag war, wenn keine Reise vorhanden, neue Reise hervorheben und Tabelle mit vorhandenen Reisen nicht zeigen
+Tracking in der App als selbstverständlich empfunden
+die dritte Liste für nach-Standorte ist verwirrend → Anmerkung: Die Anzeige der bisher gewählten Optionen verwirrt, vielleicht ändern z.B. 1.Von: Berlin → 2. Von: Berlin-Carmeq → 3. Von: Berlin-Carmeq\n Nach: 
+Liste mit Taxifahrten nicht selbsterklärend
+Ankunftszeit eingeben und automatisch Abfahrtszeit ermitteln, und vice versa → beides sollte einstellbar sein und das jeweils andere automatisch ermittelt werden
+Bestätigen/Abbrechen in der E-Mail ist verwirrend → besser erklären
+“neue Reise” ist eine schlechte Wahl für gesuchte mitfahren → vielleicht über Namensgebung nachdenken oder separate Links zur Verdeutlichung
+“Los-Button” ist unnötig → entfernen
+Kommentar/Treffpunkt je nach Eingabe anzeigen, vllt mit separater optionaler Eingabe
+Änderungswunsch bei Reiseverschiebung, vorherige Eingaben merken und nur Zeit ändern, es wird ein “Delay-Knopf” gewünscht
+
+Generelles Feedback:
+
+das “x” zum schließen der Benachrichtigungen sollte mit einem Ok-Button ersetzt werden, “x” könnte misverstanden werden
