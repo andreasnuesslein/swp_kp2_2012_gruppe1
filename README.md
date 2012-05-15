@@ -1,6 +1,4 @@
-swp_kp2_2012_gruppe1
+swp\_kp2\_2012\_gruppe1
 ====================
-test basti
-test tu
-test
-test
+
+No readme yet.
