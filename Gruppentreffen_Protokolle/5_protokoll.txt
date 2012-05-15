@@ -1,0 +1,12 @@
+1. Grundlegende Entscheidungen:
+* Entwicklung IDE: Eclipse
+* Datenbanksysem: MySQL
+* Sprache: SCALA
+* Framework: Lift oder TypeSafe
+* Test: junit, log4j und Jenkings
+2. Datenbankschema
+
+Sonstige:
+* Email an Meurath bzg. Server
+* Jede Methode enthält einen Test
+
