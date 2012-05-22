@@ -2,7 +2,7 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ;
 USE `mydb` ;
 
 -- -----------------------------------------------------
@@ -47,7 +47,6 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`Location` (
   `address` VARCHAR(80) NULL ,
   PRIMARY KEY (`location_id`) ,
   INDEX `town_location_id` (`town_location_id` ASC) ,
-  UNIQUE INDEX `town_location_id_UNIQUE` (`town_location_id` ASC) ,
   UNIQUE INDEX `name_UNIQUE` (`name` ASC) ,
   CONSTRAINT `town_location_id`
     FOREIGN KEY (`town_location_id` )
