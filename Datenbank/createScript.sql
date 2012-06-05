@@ -151,7 +151,7 @@ USE `mydb`;
 INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (1, 'Berlin');
 INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (2, 'Wolfsburg');
 INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (3, 'Ingolstadt');
-INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (4, 'Stattgart');
+INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (4, 'Stuttgart');
 INSERT INTO `mydb`.`Town` (`town_id`, `name`) VALUES (5, 'Prag');
 
 COMMIT;
