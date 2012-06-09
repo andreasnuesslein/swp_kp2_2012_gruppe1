@@ -1,0 +1,51 @@
+1. Test - clmb
+- tipp präsentation
+  - was kann der user jetz machen (user stories nur im hintergrund)
+  - kurze schriftliche darstellung, dann schnell weiter
+  - sw präsentation vorher vorbereiten
+  - sich selbst, als testnutzer
+  - bei zu vielen kommentaren abbrechen (zeitmgmt)
+
+- test:
+  -Bug: Registrierung -> loginseite (nicht auf die Startseite)
+  -feedback create new tour -> team4 |Arr|Dep| |10:00| als Interface, darunter geblocktes Feld mit jeweils anderen und berechneter Zeit
+  -Kommentarfeld sinnvoll?! (Mehr Social Traveling)
+  -Authentification -> Taxi Authentification (Oder anderes)
+  -richtige User anlegen
+  -Kleinigkeiten beachten (zB Legal Zeug bei create new Tour ausformulieren)
+  -Leute "freundlich abwürgen" falls sie mehr Funktionalität haben wollen
+
+2. Test - Alex Schedel
+- ggf startseite mit taxis und fahrten (zusammenfassung)
+- Tour absagen
+- Mit einem Klick -> typische Fahrzeiten (favorite button -> mit Zeit und typischen Verbidungen für Vorschläge)
+- Mail an Schlegel wegen screenshot von ihrer Taxi-pool-Seite 
+- Eigene Strecken sollen manuell vom User ausgewählt werden können 
+- oder automatisch generieren anhand der Historien
+- neben "Add tour" button noch "sofort" (für eilige(sofortige) Buchung)
+- schnittstelle von der anderen Gruppe anfragen, in Sachen Route-planung(team 4)
+- in MyTours -> Fahrten mit z.B. Farben hevorheben, was für Typen sie haben (z.B. Spider, team4-lösung)
+- heute und morgen button bei datepicker 
+- Departure Time gut kennzeichnen, weil Arrival Time für user verwirrend sein könnte
+- zusammenfassung von taxis die zeitnah geplant sind oder örtlich sehr nahegelegen
+- taxikennung mit angeben und erfragen bei bestellung
+- dropdown(mögliche vorgaben) für kommentare wie z.b. "ich habe kein problem 500m zu laufen" zur taxizusammenfassung etc.
+
+3. test - stefan schulz
+- bei präsentation usecases mit erwähnen zur verständlichkeit
+- unterscheidung zwischen template und schon geplanten fahrten(z.b. templates ausgrauen und markieren und geplante farbing markieren)
+- mytours, newtour und "startseite" auf einer seite anzeigen, oben(z.b. grün utnerlegt) die geplanteN fahrtEN, dann die ausgegrauten templates und die auswahl von standorten
+- notifications für neue fahrer, fahrt bestätigt etc.
+- bei mitfahrern ein bild anzeigen um die mitfahrer zu identifizieren oder zu erkennen,d a name nicht so bekannt
+- bei app ein button zur bestätigung das fahrt angetreten wurde/oder per gps
+- shuttlefahrten mit ins template nehmen, fährt alle halbe stunde(bei stefan nochmal nachfragen nach konkreten zeiten)
+- modular aufbauen für schnittstelle nach außen
+- punkte zum treffen am taxi vormerken und vorschlagen(raussuchen per googlemaps oder erfragen)
+- ausdrosoft
+
+4. test - oliver hengstenberg
+- bei anklicken von vorhandenen fahrten die bilder anzeigen der mitfahrer
+- taxikennung vllt per kennzeichen und taxinummer
+- authentification -> authentification for taxi ?
+- was passiert wenn mitfahrer die fahrt vergisst?
+- ist ein taxi gerade in der nähe des aktuellen standortes? erfragen per schnittstelle und ausgeben
