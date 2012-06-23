@@ -1,0 +1,52 @@
+﻿Login:
+    -Registrieren mit den Daten aus den zwei Loginfeldern ermöglichen(dazu ein Register-Button neben Login)
+
+Registrieren:
+    -Hinweis für Mindestlänge beim Passwort direkt nach Passworteingabe, nicht erst nach Submit
+    -Carmeqmitarbeiter haben eine interne 5-stellige Nummer für ihre Diensttelefone, diese eventuell mit angeben(oder als Option)
+
+Hauptseite:
+    -kleine Überschriften statt Legende zur Erklärung
+    -Add Tour neben Plan a new tour anstatt unter die Liste mit den Fahrten
+    -Sortierung von Select-Feldern alphabetisch
+    -Erstellung neuer Orte ermöglichen
+    -Bei Tourerstellung ein Flag für private Fahrten einbauen, damit Plattform privat genutzt werden kann und nicht jeder private Touren sieht
+    -Legende oben zu Plan a new Tour statt unter der Liste und mit Farbe unterlegen
+    -Templates/Favorites auf 4 oder 5 reduzieren
+    -Farblayout anpassen?
+    -Templates/Favorites erklären
+    -Tours-Link entfernen, TAWusel-Button reicht aus
+    -Erklärung von pending Mouse-Over anpassen, die Taxibestellung steht noch aus und nicht die Tour wurde weder bestätigt noch abgebrochen
+    -Initiatorwechsel ermöglichen, falls Absprache unter Teilnehmern außerhalb der Plattform stattfand und der ursprüngliche Initiator die Bestellung nicht vornehmen kann, z.b. weil er in einem Termin ist und nicht bestätigen/abbrechen kann
+    -bei Fahrterstellung ein Popup, wenn man eine Fahrt erstellt die so schon vorhanden ist, mit gleicher Uhrzeit und gleichen Abfahrts- und Ankunftsorten
+    -Favorites zurücksetzen gewünscht, falls nach einer Zeit nur noch ein komplett anderer Standort angefahren wird und somit die Favoriten angepasst werden können(vllt auch ins Profil verlegen die Funktion, diskutieren)
+    -optische Anpassung der Anzeige mehrerer Fahrten zum gleichen Ziel, in etwa wie folgt:
+    |   WOB    |   Autovision    |   Hbf    |   \/         |
+                     |   From             |   To      |   Time   |
+
+Profil:
+    -eine Historie der bisherigen Fahrten in einer Tabelle mit Pager
+    -Bild selbt hochladen ermöglichen
+
+Allgemeines:
+    -NeueTourMail: Hinufügen des Organisators und seiner Handynummer
+    -OrganisatorOrderMail: Infors über Mitfahrer(Wer fährt mit?)
+    -Redirect von /tour/:id/confirm/:token bzw. /tour/:id/cancel/:token zu einer Seite mit dem Inhalt, dass die Zusage/Absage erfolgreich war, nicht zur Tourseite
+    -SMS bietet eine Antwortfunktion, welche für alte Handys ohne Internetzugang nützlich wäre, Aufwand evaluieren und Nutzen abschätzen
+    -beim joinen eine Notification an den Joiner
+    -MLC in der FE-Taxiliste ist Autouni
+
+Checks:
+    -Timer sendet E-Mail trotz gelöschtem User?
+    -schickt Timer E-Mail nach Verlassen einer Fahrt?
+    -Flashingnachricht nach Tourcreate geht nicht(selbiges natürlich für Favorites)
+
+für Fieldtests:
+    -Mail an Herrn Meuthrath mit 2-3 Sätzen über unsere Anwendung, Link zu wusel.noova.de, dem Issuetracker im Github(Taximob) und E-Mailadresse für Tester ohne GitHubaccount(vllt neu anlegen)
+    -bei Anpassung der Anwendung aufgrund von Feedback, eine Mail an alle Tester, ermittelt aus den Nutzern in der DB, dass ein neues Feature zur Verfügung steht
+    -Feedbackbutton
+
+Anmerkung von clmb:
+    -Präsentation an sie senden(schon erledigt)
+    -Gravatarlink an sie senden(schon erledigt)
+    -Teamphoto an sie senden(steht noch aus)
