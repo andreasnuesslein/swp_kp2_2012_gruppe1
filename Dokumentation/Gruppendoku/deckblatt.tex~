@@ -1,0 +1,35 @@
+\begin{titlepage}
+  \begin{center}
+    \Large
+    \textsc
+    {
+    	\\
+    	\vspace{2cm}
+    	Softwareprojekt: Kundenprojekt II \\ Webtechnologien
+    }\\
+  	\vspace{5cm}
+  	\textsc
+  	{
+  		Gruppendokumentation\\[0.5\baselineskip]
+  		von\\[0.5\baselineskip]
+  		Team 1\\
+		\begin{tiny}
+			Tom Bullmann\hspace{2cm}Andreas N\"u\ss{}lein\hspace{2cm}Sebastian Schulz\hspace{2cm}Mareike Ziese\\
+		\end{tiny}
+  	}
+  	\vspace{5cm}
+    \textsc{\today}\\
+    \vspace{1cm}
+    \textsc
+    {
+    	Dozentin:\\
+    	Prof. Dr. M\"uller-Birn
+    }\\
+  	\vspace{1cm}
+  	\textsc{
+  		Freie Universit\"at Berlin\\
+  		Fachbereich Mathematik und Informatik\\
+  		Institut f\"ur Informatik
+  	}\\
+  \end{center}
+\end{titlepage}

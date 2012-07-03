@@ -1,0 +1,69 @@
+\chapter{Übung zum 06.11.2009}\label{ue2}
+\section{Protection Rings}\label{ue2_1}
+
+Die Idee hinter den Protecion Rings ist schlicht und einfach eine erhöhte Sicherheit. Dabei geht es darum, dass der Zugriff auf bestimmte Befehle nicht jedem Programm gewährt wird, sondern nur Programmen die innerhalb der erforderlichen Ringe laufen, somit wird weniger Code mit Kernel-Rechten ausgeführt, was die Stabilität und Sicherheit des Systems erhöht.\\
+Allerdings besteht die Möglichkeit diese für manche Ringe gesperrten Befehle trotzdem auszuführen, dies geschieht mittels System Calls.\\
+Es existieren 4 Ringe, von Ring 0 bis Ring 3, mit steigender Zahl nimmt die Verfügbarkeit an nutzbaren Befehlen ab. Gängige Betriebssysteme nutzen allerdings nur zwei Ringe, den Ring 0, welcher für den Kernel reserviert ist, und den Ring 3, welcher für Anwenderprogramme vorgesehen ist.\\
+
+\section{Beurteilen Sie}\label{ue2_2}
+
+\begin{itemize}
+	\item Die Aussage ist richtig, der Microkernel beschränkt sich im wesentlichen darauf, die Speicheradressen zu verwalten und mitder Kommunikation zwischen den Prozessen(IPC). Jedoch geschieht die Speicheradressenverwaltung nur auf einem geringen Level. Weiterhin bietet der Microkernel noch Mechanismen zur Implementierung eines Betriebssystems.
+
+	\item Das ist eine richtige Aussage. Das Betriebssystem muss darauf achten, dass die Speicherbereiche sich nicht überschneiden, da es selbst Zugriffsrechte für die Speicherverwaltung hat, jedoch nicht in vollem Umfang.
+
+	\item 
+
+	\item Dies ist eine wahre Aussage. Die Gründe hierfür liegen in der Struktur des Microkernels, anders als beim monolithischen Kernel ist der Microkernel nur mit einem geringen Befehlssatz ausgestattet. Dadurch werden vermehrt Context Switches ausgeführt, z.B. bei Hardware-Zugriffen.
+
+\end{itemize}
+
+\section{Syscalls}\label{ue2_3}
+
+\textbf{Subroutinenaufruf:}\\
+\\
+Wird bei sehr einfachen Betriebssystemen wie etwa MS-DOS und eingebetteten Systemen verwendet, die über keinen separaten Adressenraum verfügen. Der User Prozess bekommt dabei vollen Zugriff auf die Hardware (Ring 0). Das Interrupt Handling wird durch das einfache Zurückspringen (RETI) in das Programm beendet.\\
+\\
+\\
+\textbf{SVC - Supervisior Aufruf:}\\
+\\ 
+Wird bei den meisten UNIX Betriebssystemen verwendet. Um einen Interrupt behandeln zu können findet ein Context-Switch in den Kernelmode statt, wo dann der Interrupt behandelt (abgearbeitet) wird. Nach der Abarbeitung des Interrupts findet ein erneuter Context-Switch in den Usermode statt.\\
+\\
+\\
+\textbf{Systemmodul- / -objektaufruf:}\\
+\\
+Das Interrupt Handling funktioniert ähnlich wie beim SVC, aber der Kernel verfügt hierbei nicht über so einen großen Befehlssatz wie beim SVC.
+Zuerst findet ein Context-Switch in den Kernel-Mode statt, dann wieder ein Context-Switch in den Usermode, wo dann der Aufruf abgearbeitet wird.
+Nach der Abarbeitung des Interrupts findet wieder ein Context-Switch in den Kernel und dann wieder in den Usermode statt.\\
+\\
+\\
+\textbf{Dispatching:}\\
+\\
+Diese Art der Interrupt-Behandlung ist für asynchrone Systeme wie Minix oder Mach sinnvoll. Ein Interrupt wird mit einem SEND-Befehl angekündigt, so das ein Kernel mit RECV den Interrupt annehmen kann, diesen dann abarbeiten kann und dem Programm das den Interrupt gemeldet hat dann mit SEND wieder melden kann, dass der Interrupt fertig ist. Das Programm nimmt dann mit RECV das Ergebnis (den fertigen Interrupt) wieder an. So kann verteilt mehr gerechnet werden.
+
+
+\section{Programmieren in C}\label{ue2_4}
+\begin{enumerate}[label={\alph*)}]
+	\item
+\begin{tabularx}{\linewidth}{|X|X|}
+	\hline
+	\textsc{Befehl} & \textsc{Funktion} \\
+	\hline
+	[echo] > FILE & create file FILE \\
+	touch FILE & \\
+	\hline
+	cp [OPTION]... [-T] SOURCE DEST & copy file SOURCE to file DEST \\
+	\hline
+	mv [OPTION]... [-T] SOURCE DEST & move file SOURCE to file DEST \\
+	\hline
+	cat [OPTION] FILE & print content of file(s) to standard output \\
+	\hline
+	ls & list directory contents \\
+	\hline
+\end{tabularx}
+	\item siehe Listing $\downarrow$
+	\item
+		trashcan\_framework.c
+		\linespread{0.5}
+		\lstinputlisting[breaklines=true]{src/trashcan.c}
+\end{enumerate}

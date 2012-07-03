@@ -1,0 +1,123 @@
+\chapter{\"Ubung zum 08.01.2010}\label{ue9}
+\section{Wireshark}\label{ue9_1}
+Wir haben ein Verbindung zur Internetseite "`www.google.de"' mit Wireshark mitgeschnitten.
+Dabei haben wir folgenden Pakete entdeckt.
+\begin{description}
+  \item[TCP] Transport Control Protocol (dt. "Ubertragungsprotokoll). 
+    Baut eine End-zu-End-Verbindung zwischen zwei Sockets auf. 
+    Bei TCP k\"onnen Verbindungen in beide Richtungen aufgebaut werden 
+    (Vollduplex). Dabei werden IP-Adressen und Portnummer beider 
+    Kommunikationspartner gebraucht. Es ist m\"oglich mehrere 
+    TCP-Verbindungen gleichzeit offen zu haben. Dazu "`lauscht"' der Server 
+    auf einen Port. Wird zu diesem Port eine Verbindungsanfrage gesendet, 
+    akzeptiert der Server diese und beginnt die Kommunikation auf 
+    einem neuen Socket.
+  \item[UDP] \label{udp} User Datagram Protocol ist ein Netzwerkprotokoll 
+    zur Daten\"ubertragung. Dieses Protokoll wird im OSI-Schichtmodell in 
+    die Transportschicht eingeordnet und geh\"ort zur Internetprotokollfamilie. 
+    UDP ben\"otigt f\"ur einen Verbindungsaufbau die Ports des Zielrechners an 
+    den Packete gesendet werden sollen. Sind die Ports bekannt, k\"onnen 
+    Daten gesendet werden ohne eine Verbindungsanfrage zu starten. Auch 
+    beendet werden muss eine Verbindung nicht. Gegen\"uber dem 
+    verbindungsorientierten TCP ist UDP verbindungslos. Daher gibt es keine 
+    Garantie, dass gesendete Packete beim Empf\"anger ankommen. Ebenfalls 
+    k\"onnen darum auch keine Garantien f\"ur die richtige Reihenfolge der 
+    Packete gegeben werden. Diese Einschr\"ankungen bieten jedoch auch 
+    gro\ss en Vorteil. Denn UDP-Verbindungen erzeugen weniger Overhead als 
+    TCP-Verbindungen, die Verbindung und jedes ankommende Packet 
+    best\"atigen. 
+    So macht UDP bei \"Ubertragung von Daten Sinn, wo es auf die 
+    Geschwindigkeit ankommt. Ebenfalls macht UDP bei Voice over 
+    IP-Verbindungen Sinn, wo ein Packetverlust nur zur schlechteren 
+    Qualit\"at führt, jedoch eine langsame Verbindung die gesamte 
+    Kommunikation zum Erliegen bringen kann.
+  \item[HTTP] Hypertext Transfer Protocol (dt. Hypertext-
+    \"Ubertragungsprotokoll) wird zur \"Ubertragung von Daten in einem 
+    Netzwerk genutzt. HTTP befindet sich im OSI-Schichtmodell in der 
+    Anwednungsschicht. Generell k\"onnen alle Daten aus allen Netzwerken 
+    \"ubertragen werden, jedoch findet HTTP den gr\"o\ss ten 
+    Anwendungsbereich bei der Daten\"ubertragung im WWW (World Wide Web). 
+    Wenn eine IP-Adresse bekannt ist kann durch eine TCP-Verbindung auf 
+    Port 80 des HTTP-Servers eine HTTP-GET-Anfrage gesendet werden. Danach 
+    folgt die Daten\"ubertragung.
+  \item[DNS] Domain Name System ist ein Internetdienst, der zur Beantwortung 
+    von Anfragung zur Namensaufl\"osung dient. DNS stellt somit einen 
+    Verzeichnisdienst dar, der alle vergebenen Internetdomains und ihre 
+    dazugeh\"origen IPv4 oder IPv6-Adressen kennt. So k\"onnen Anfragen 
+    mit Domainnamen, sowie Anfragen mit IP-Adressen entgegengenommen und 
+    beantwortet werden.
+\end{description}
+\section{Iperf}\label{ue9_2}
+  Wir haben mit Iperf festgestellt, dass die Daten"ubertragung bei TCP 
+  langsamer verl"auft als bei UDP. Dies ist begr"undet in den 
+  "Ubertragungsart der beiden Protokolle, auf die wir im folgenden 
+  genauer eingehen.
+\subsection{TCP-Verbindung zwischen Client-Server}
+  TCP stellt eine Verbindung zwischen zwei End-Punkten (Sockets) in einem 
+  Netzwerk her. Diese Verbindungsaufbau geschieht immer gleich:
+\begin{description}
+  \item[3-Wege-Handschlag (Verbindungsaufbau):] Eine Verbindung wird nach 
+    dem Prinzip des 3-Wege-Handschlages aufgebaut. Dieser wird im 
+    folgenden erl"autert und kann in Abbildung 1 nachvollzogen werden. 
+    Der Client mit IP-Adresse 192.168.2.102 und Port (43489) sendet ein 
+    Packet an eine bekannte IP-Adresse (192.168.2.100) und Port (5001). 
+    Bei diesem Packet ist das SYN-Flag (\textbf{SYN}chronize) gesetzt. 
+    Das bedeutet, dass eine Verbindung hergestellt werden soll. 
+    192.168.2.100 empf"angt das Packet und antwortet darauf mit einem 
+    Packet, bei dem SYN und ACK-Flag gesetzt ist. SYN und ACK bewirken, 
+    dass ebenfalls eine Verbindung von 192.168.2.100 nach 
+    192.168.2.102 aufgebaut werden soll und die Verbindung ausgehend 
+    von 192.168.2.102 akzeptiert werden soll (\textbf{ACK}nowledgment). 
+    Wenn der Client das Packet empf"angt, nimmt er die Verbindung 
+    ausgehenden vom Server ebenfalls an. Damit ist die Verbindung 
+    etabliert.
+  \item[Daten"ubertragung:] Nachdem eine Verbindung zwischen Client und 
+    Server steht, k"onnen Datenpakete ausgetauscht werden. Dazu schickt 
+    der Client ein erstes Paket mit einer Sequenznummer (Seq) 
+    (meistens 1, aber kann auch variieren) und einer L"ange (Len). In 
+    unserem Fall betr"agt Len 1460. Empf"angt der Server dieses Packet 
+    sendet er eine Nachricht mit Seq 1461 und best"atigt damit dem Empfang 
+    und fordert das Segment ab Stelle 1461 an. Zwischendurch kann es immer 
+    wieder zum Packetverlust kommen. Diese Pakete werden nach Ablauf eines 
+    Timers erneut gesendet. Clientseitig und serverseitig werden 
+    Datenpackete gepuffert. Dabei verfolgen beide unterschiedliche Ziele. 
+    Der Client m"ochte die effizientere "Ubertragung von kleinen Packeten 
+    dem senden von gro\ss en Packeten vorziehen. Der Server hingegen will 
+    nicht bei jeder Ankunft von Packeten diese an eine Application 
+    weiterreichen m"ussen.
+  \item[Fazit:] TCP erzeugt sehr viel Overhead, da zuerst die Verbindung 
+    (sp"ater auch der Abbau) und danach jeder Erhalt eines Packetes 
+    best"atigt werden muss. Dies legt sich auf die Geschwindigkeit nieder.
+\end{description}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.4]{img/bild1.jpg}
+  \caption{Mitschnitt einer TCP-Verbindung zwischen Client(192.168.2.102) 
+  und Server(192.168.2.100)}%
+\end{figure}
+\subsection{UDP-Verbindung zwischen Client und Server}
+  UDP ist ein verbindungsloses Netzwerktransferprotokoll. Verglichen mit 
+  TCP hat UDP einen enormen Geschwindigkeitsvorteil. Dies liegt vorallem 
+  daran, dass Verbindungen weder aufgebaut, noch abgebaut werden. 
+  Au\ss erdem wird die Ankunft von keinem Paket best"atigt. Sehen kann 
+  man dieses Verhalten in Abbildung 2.
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[scale=0.4]{img/bild2.jpg}
+  \caption{Mitschnitt einer UDP-Verbindung zwischen Client(192.168.2.102) 
+  und Server(192.168.2.100)}
+\end{figure}
+\section{Socket-Programmierung}\label{ue9_3}
+\begin{enumerate}
+	\item
+		\textbf{Unix domain sockets} \\
+		Server:
+		\lstinputlisting[breaklines=true]{src/u9/u9a3_1_server.c}
+		Client:
+		\lstinputlisting[breaklines=true]{src/u9/u9a3_1_client.c}
+	\item \textbf{Internet sockets} \\
+		Server:
+		\lstinputlisting[breaklines=true]{src/u9/u9a3_2_Server.c}
+		Client:
+		\lstinputlisting[breaklines=true]{src/u9/u9a3_2_Client.c}
+\end{enumerate}

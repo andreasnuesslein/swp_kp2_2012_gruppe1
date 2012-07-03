@@ -1,0 +1,17 @@
+\chapter{\"Ubung zum 29.01.2010}\label{ue12}
+\section{MAC-Verfahren}\label{ue12_1}
+\begin{enumerate}[label={\alph*)}]
+	\item
+	  Beim Einsatz von Switches weicht die logische Netzwerkstruktur (anders als beim Hub) von der physikalischen Topologie ab (der Switch kennt den Port des Empf\"angers und schickt die Daten nicht auf alle Leitungen). Switches k\"onnen intern mehrere Sendungen gleichzeitig \"ubertragen, wodurch sich gleichzeitige Sendungen von Port 1 an Port 2 und Port 3 an Port 4 nicht beeinflussen. \\
+		Durch Einteilung in V-LANs kann auch die Verteilung von Broadcast-Anfragen nochmals auf bestimmte Teilnetze reduziert und so die Wahrscheinlichkeit von Kollisionen verringert werden.
+	\item
+		Kommen die Daten schneller beim Switch "`herein"', als dieser sie \"uber das Netzwerk weiter schicken kann, so werden diese Daten zwischengepuffert. Sofern m\"oglich, wird auch Flow Control eingesetzt um Sender zum langsameren Verschicken der Daten aufzufordern. \\
+\end{enumerate}
+
+\section{Problem der \enquote{Versteckten Endger\"ate}}\label{ue12_2}
+\begin{enumerate}[label={\alph*)}]
+	\item Zwei Sender, die sich gegenseitig nicht "`sehen"', da sie zu weit auseinander stehen senden zeitgleich an einen Empf\"anger. Dort kommt es zu einem Konflikt, was die beiden Sender jedoch nicht bemerken k\"onnen, wodurch beide nicht zum Empf\"anger durchdringen.
+	\item In asynchronen und nicht zentral koordinierten Kommunikationsnetzen, Funknetzen oder Rechnernetzen
+	\item Der Empf\"anger sendet selbst die Information, dass eine Kollision aufgetreten ist, was beide Sender empfangen und zum Anlass nehmen, eine zuf\"allige Zeit zu warten, bevor sie mit dem erneuten Senden beginnen. W\"ahrend eines laufenden Datenverkehrs sendet der Empf\"anger zudem st\"andig Informationen \"uber den Erhalt der Nachrichten. So kann der passive Sender erkennen, dass der Empf\"anger gerade noch Daten von anderen Sendern empf\"angt.
+\end{enumerate}
+\section{Programmieren in C}\label{ue12_3}

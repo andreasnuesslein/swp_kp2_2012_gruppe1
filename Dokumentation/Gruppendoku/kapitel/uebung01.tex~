@@ -1,0 +1,62 @@
+\chapter{Übung 1}\label{ue1}
+
+\section{Problem 1: Begriffe }\label{ue1_1}
+\begin{enumerate}[label={\alph*)}]
+\item Instruction Set \\
+Der Instruction Set (Befehlssatz) beinhaltet die Instruktionen und deren Variationen, die ein Prozessor bzw. ein Interpreter im Falle einer virtuellen Maschine ausführen kann und ist damit ein wesentlicher Bestandteil der Computer-Architektur. Hierzu gehören z.B. logische Verknüpfungen (AND, OR, NOT) sowie arithmetische Operationen (ADD) aber auch Datenverarbeitende Anweisungen wie LOAD, STORE und MOVE und Programmfluss-Instruktionen wie GOTO, IF, CALL und RETURN die es ermöglichen, die Ausführungsreihenfolge der Befehle zu manipulieren.
+\item Interrupt \\
+Ein Interrupt ist eine Störung der aktuellen Prozesse, es wird zum nächstmöglichen Takt eine Unterbrechung verursacht, sodass mit einer anderen Aufgabe fortgefahren werden kann.
+Es wird dann eine Interrupt-Behandlungsroutine abgearbeitet, die je nach angefallenem Interrupt unterschiedlich vorgeht um die ''Störung'' zu beheben und wieder zum vorherigen Prozess zurückkehren zu können.
+\item Prozess \\
+Ein Prozess ist ein datenverarbeitender Vorgang der Systemressourcen(Speicher, Programmcode, usw.) benötigt und vom Prozessor bearbeitet wird. Prozesse können am Stück oder aufgeteilt in mehrere Einheiten verarbeitet werden.
+\item Datei \\
+Eine Datei ist ein fiktives Modell, welches die Speicherung von Daten als ein Paket darstellt. So sieht der User eine Datei, welche jedoch total zerstückelt auf dem Speicher vorliegen kann, der Zugriff auf die Daten erfolgt meistens per Dateimanagementsystem.
+\item Systemaufruf \\
+Ein Systemaufruf bietet Anwenderprogrammen die Möglichkeit mit dem Betriebssystem zu interagieren. Sie ermöglichen es also aus der Anwenderebene (Ring 3) auf die Kernelebene (Ring 0) zuzugreifen.
+\item Multitasking \\
+Multitasking heißt die gleichzeitige Abarbeitung mehrerer Prozesse zur exakt selben Zeit. D. h. in einem Takt werden mehr als eine Aufgabe ausgeführt, erreicht wird dies durch mehrere Prozessoren, da ein Prozessor nur jeweils eine Aufgabe pro Takt abarbeiten kann, es gibt allerdings auch Lösungen die eine Simultanabarbeitung simulieren, es also nacheinander abarbeiten, aber immer abwechselnd, so das es erscheint als wäre es simultan.
+\end{enumerate}
+\section{Problem 2: Kernel}\label{ue1_2}
+Der Unterschied zwischen Microkernel und monolithischem Kernel ist, das der Microkernel nur den Kernel im innersten Ring(Ring 0) hat und sowohl Server als auch Software auf dem äußersten Ring(Ring 3) sind.
+Beim monolitischen Kernel sind Server und Kernel zusammen im innersten Ring.
+Dies hat zur Folge, dass die Komplexizität beim monolithischen Kernel erheblich größer ist als beim Microkernel, dafür aber auch die Effektivität. Der monolithische Kernel hat also einen größeren Befehlssatz als der Microkernel, was die Effektivität verbessert.
+\begin{enumerate}[label={\alph*)}]
+\item Microkernel \\
+	\begin{enumerate}[label={\alph*)}]
+	\item[Pro:]	geringe Komplexizität \\
+			strikte Schnittstellen
+	\item[Kontra:]	langsamer (aufgrund vermehrter Context Switches) \\
+			Synchronisation
+	\end{enumerate}
+\item monolithischer Kernel \\
+	\begin{enumerate}[label={\alph*)}]
+	\item[Pro:]	weniger Context Switches \\
+			effektivere Kommunikation
+	\item[Kontra:]	erschwertes Ändern durch aufwendige Programmierung \\
+			hohe Entwicklungskosten
+	\end{enumerate}
+\end{enumerate}
+\section{Problem 3: Begriffe}\label{ue1_3}
+\begin{enumerate}
+\item Nested-Interrupts \\
+Wenn es vorkommt, dass während eines laufenden Interrupts ein oder mehrere weitere Interrupts gemeldet werden, gibt es verschiedene Möglichkeiten, damit umzugehen.
+Eine Möglichkeit sieht vor, Interrupts immer bis zum Ende durchlaufen zu lassen. Bevor überhaupt die Register für den ersten Interrupt gesichert werden, wird ein Flag gesetzt, so dass keine weiteren
+Interrupts mehr zugelassen werden.
+Der Vorteil liegt hier in der geringen Komplexität, allerdings birgt das einige Nachteile:
+\begin{itemize}
+\item 
+Während ein Interrupt läuft, könnten mehrere Interrupts auftreten. Die Anzahl der Interrupts aber wird nicht gespeichert, sondern nur, dass einer oder mehrere(unterschiedliche) auftraten. Nach Ausführung des ersten Interrupts wird daher mit der Ausführung des letzten begonnen, alle anderen in der Zeit aufgetretenen Interrupts sind verloren.
+\item 
+Die Interrupt-Latenz ist vergleichsweise hoch. Im schlimmsten Fall jeweils die Zeit, welche die CPU benötigt, um den Interrupt aufzurufen plus die Dauer des gerade abzuarbeitenden Interrupts. In Zeitkritischen Systemen (Airbag) kann das entscheidend sein.
+\item 
+Wird das System mit Interrupts bombardiert (z.B. Lesefehler beim Einlesen einer zerkratzen CD) könnte es vorkommen, dass nach abgearbeiteten Interrupts immer wieder der Interrupt-Handler aufgerufen wird und so weiter. Der eigentliche Programmfluss friert ein.
+\end{itemize}
+Um diese Nachteile zu umgehen, gibt es eine zweite Möglichkeit, bei der man sogenannte Nested-Interrupts verwendet, durch die auch laufende Interrupts unterbrochen werden können. Wie auch beim Aufruf eines Interrupts aus dem Programmfluss heraus wird der aktuelle Zustand (in Form des Prozessor-Status-Wortes) zusätzlich zum Programm-Zähler gesichert und nach Abarbeiten des Interrupts wiederhergestellt.
+Besonders bei Echtzeit-Systemen wird diese Art und Weise der Interrupt-Behandlung verwendet, da so die Latenz garantiert gering gehalten werden kann. Die hohe Komplexität erfordert jedoch,
+dass das gesamte System inklusive Treiber und Programme darauf abgestimmt ist und die Programmierung gestaltet sich ungleich aufwendiger. Zudem ist eine aufwendige Priorisierung der
+Interrupts erforderlich, damit kritische Routinen nicht von unwichtigen unterbrochen werden können.
+\end{enumerate}
+
+\section{Problem 4: Dateien mit C einlesen}
+\linespread{0.5}
+\lstinputlisting[breaklines=true]{src/ue01.c}

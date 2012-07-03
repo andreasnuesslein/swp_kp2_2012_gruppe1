@@ -1,0 +1,29 @@
+\chapter{Übung zum 13.11.2009}\label{ue3}
+\section{Sinn und Funktion der Felder im Process Control Block}\label{ue3_1}
+Der PCB ist eine Tabelle, die pro laufenden Prozeß einen Eintrag erhält.
+Hauptsächlich ist der PCB für die Speicherverwaltung verantwortlich. 
+Der PCB enthält Spezifische Informationen über den Status der Prozesse(bereit, laufend, wartend usw.), das Scheduling, die Prozesspriorität, Events, Pointer zu den Elternprozessen, Pointer zu Kindprozessen(wenn vorhanden), die Prozeß-ID, den Prozessor auf dem es läuft und über Pointer zum lokalen Speicher der Prozesse.\\
+Mittels PCB wird dem Betriebssystem ermöglicht wichtige Informationen über einen Prozeß zu ermitteln, somit ist der PCB ein Datengebilde das dem Betriebssystem Prozesse definiert.
+
+\section{Erklärung des fork() Befehls}\label{ue3_2}
+Der Befehl fork() erstellt eine Kopie des aktuell laufenden Prozesses.
+Der so erzeugte Kindprozeß des Prozesses übernimmt alle Daten, den Maschinencode und den Befehlszähler des Elternprozesses, erhält allerdings eine eigene PID (Process ID) und wird ab dann als eigenständige Instanz des Programms und unabhängig vom Elternprozeß ausgeführt. Das macht immer dann Sinn, wenn man mit dem selben Programm mehrere verschiedene Dinge parallel berechnen möchte.
+
+\section{Abgrenzung: Task, Process, Thread}\label{ue3_3}
+Alle diese Begriffe beschreiben letzendlich Prozesse, die sich darin unterscheiden von wem und wo sie ausgeführt werden.
+
+\begin{enumerate}[label={\alph)*}]
+	\item[\textbf{Task}]	Ein Task ist jeglicher Vorgang der vom Computer durchgeführt werden kann. Tasks werden unabhängig von einander ausgeführt.\\
+	Sie bestehen aus einer Folge von Anweisungen oder mehreren nacheinander abzuarbeitenden Aufgaben die an das Betriebssystem gerichtet sind. Enthalten sind Informationen über Größe des Tasks und welche Ressourcen genutzt werden.\\
+	Werden mehrere Tasks parallel abgearbeitet redet man von Multitasking, bei Umschaltung zwischen Tasks redet man von Task-Switching.
+	\item[\textbf{Process}]	Mehrere aneinander gereihte Aktionen, welche von einem Programm ausgeführt werden, nennt man Prozeß.
+	Programme können mehrere Prozesse ausführen.\\
+	Werden Prozesse nacheinander im Time-Sharing abgearbeitet, handelt es sich um Teilprozesse, diese sind in ihrer Gesamtheit der ganze Prozeß. Jeder (Teil-)Prozeß ist durch seinen Zustand gekennzeichnet, dieser kann aktiv, zur Bearbeitung bereit oder wartend sein.\\
+	Werden mehrere Prozesse gleichzeitig bearbeitet, nennt man sie parallele Prozesse.
+	\item[\textbf{Thread}]	Threads sind eigenständige Aktivitäten in einem Prozeß, die unabhängig von anderen Prozeßteilen abgewickelt werden. Jeder Thread ist ein Verarbeitungsstrang und besitzt einen eigenen Prozeßkontext.\\
+	Threads haben unterschiedliche Prioritäten und können wiederum Threads mit geringeren Prioritäten auslösen, welche ebenfalls Threads auslösen können(natürlich nur mit geringeren Prioritäten).\\
+	Insbesonders bei RPC-Umgebungen haben Threads sich als notwendig erwiesen um die vielfältigen, potentiell parallelen Aktivitäten handhaben zu können.
+\end{enumerate}
+
+\section{Programmieren in C}\label{ue3_4}
+\lstinputlisting[breaklines=true]{src/u3/processAdminFrame.c}

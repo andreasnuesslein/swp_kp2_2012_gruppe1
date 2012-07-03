@@ -1,0 +1,25 @@
+\chapter{\"Ubung zum 18.12.2009}\label{ue8}
+\section{C-Funktion stdcall}\label{ue8_1}
+\subsection{stdcall}
+Der stdcall als Intel x86 Funktionsaufrufskonvention gesehen ist folgendermaßen definiert. Es handelt sich hierbei um eine M\"oglichkeit Funktionsaufrufe zu definieren, was vor allem für die Stackverwaltung wichtig ist. \\
+Beim stdcall liegt das Hauptaugenmerk dabei auf eine festgelegte Anzahl an Parametern, die auf den Stack gelegt werden. Wir gehen davon aus, dass wir von einer Funktion in die n\"achste springen, also einen Funktionsaufruf machen, es wird hierbei der CALL-Befehl verwendet. Wird der CALL-Befehl ausgef\"uhrt, so wird die Adresse des nachfolgenden Befehls aus der aktuellen Funktion (die Funktion, die den CALL-Befehl ausf\"uhrt) auf den Stack gelegt. Die durch den CALL-Befehl aufgerufene Funktion wird abgearbeitet und am Ende dieser Funktion wird der RET-Befehl ausgef\"uhrt, der die Adresse aus dem obersten Wert vom Stack ausliest und in den ``Instruction Pointer'' (ein Register) l\"adt. Aus diesem Register liest die CPU quasi aus, was sie als n\"achstes zu tun hat, da dort die oben gespeicherte Adresse liegt und er unsere urspr\"ungliche Funktion weiter abarbeiten kann. \\
+\includegraphics{img/Stack.jpg} \\
+\\
+Beim stdcall werden nun vom Aufrufer des CALL-Befehls alle gesetzten Parameter auf den Stack gelegt, obendrauf dann durch den CALL-Befehl noch die R\"ucksprungadresse. Dar\"uber ist das EBP-Register (``Extended Base Pointer''-Register) und dar\"uber die lokalen Variablen. Auf den obersten Punkt zeigt, wie wir es in TI2 gelernt hatten, der Stack-Pointer. Allgemein bilden lokale Variablen, das EBP-Register, die R\"ucksprungadresse und die Parameter des Aufrufers den Stackframe, was quasi einen Rahmen im Stack bildet, der die Gesamtheit der oben genannten Teile beschreibt. \\
+\includegraphics{img/Stack2.jpg} \\
+\section{Buffer Overflows}\label{ue8_2}
+Ein Bufferoverflow ist eine \"uberm\"a\ss ige Eingabe. Damit ist gemeint, dass bei einer I/O-Operation(z.B. per Tastatur oder eingelesener Datei) Daten eingelesen werden m\"ussen und man dabei gezielt mehr Bytes eingibt als eigentlich vorgesehen sind. Es werden also beispielsweise 12 Byte eingegeben obwohl nur 10 Byte vorgesehen sind(vom Programmierer vorgesehen). Durch diese Mehreingabe kann bei ungesicherten Buffern das gezielte Schreiben von Daten auf dem Stack erreicht werden. Dies ist n\"utzlich um die R\"ucksprungaddresse zu \"andern und an einen bestimmten Punkt im Programm zu Springen von wo aus in der Regel eigener Code ausgef\"uhrt wird.\\
+Allerdings ist dies nur m\"oglich, wenn die geforderte Eingabe nicht abgesichert ist, also die Eingabel\"ange nicht begrenzt wird, denn dann k\"onnen mehr Zeichen eingegeben werden als gedacht und diese werden dann auf dem Stack gespeichert und \"uberschreiben andere Daten die aufgrund der I/O-Operation gesichert werden mussten, die wohl wichtigste Data dabei ist die R\"ucksprungaddresse. Denn mit deren Hilfe lie\ss e sich das gesamte Programm \"andern, jedenfalls deren weitere Ausf\"uhrung, da man zu einem Punkt springt an dem eigener Code liegt und von dort an z.B. Passw\"orter gelesen werden und/oder E-Mail-Server geknackt werden um Spam-Mails zu versenden.
+\section{HackMe}\label{ue8_3}
+Die Funktion \lstinline|int checkPW()| definiert die lokalen Variablen \lstinline|int j| und \lstinline|char pw[16]|. Mittels einer Schleife die j bei jedem Durchlauf inkrementiert, wird aus einer Datei pw das Passwort eingelesen. Dabei wird aber nicht nach 16 Zeichen abgebrochen, sondern bis zum EOF gelesen.
+\begin{lstlisting}[breaklines=true]
+while((ch = fgetc(pwFile)) != EOF && !feof(pwFile))
+{
+  printf("%d, %c\n",j,ch);
+  pw[j] = ch;
+  ++j;		
+}while(!feof(pwFile));
+\end{lstlisting}
+Diese Sicherheitsl\"ucke nutzen wir aus. Da die lokale Variable j vor dem Char-Array definiert wurde, befindet sich dieses j oberhalb des Char-Arrays. Wenn mehr als 16 Zeichen in der Datei pw enthalten sind, werden diese ebenfalls eingelesen und so der Wert von j \"uberschrieben. Das 17. Zeichen k\"onnen wir nun so w\"ahlen, dass j den Wert 31 annimmt. Beim n\"achsten Durchlauf wird dieser auf 32 inkrementiert. \lstinline|pw[j]| zeigt dadurch nun auf die Stelle im Stack, wo sich der Return-Pointer befindet. Den nicht zu ermittelnden EBP haben wir \"ubersprungen. Nun k\"onnen wir den Return-Pointer mit der von uns gew\"unschten Adresse \"uberschreiben. Dabei m\"ussen wir beachten, dass wir zun\"achst das letzte Byte des Return-Pointers einlesen, dann das vorletzte usw. Mit einem Hex-Editor schreiben wir die von uns gew\"unschte R\"ucksprungadresse also Byteweise in umgedrehter Reihenfolge.
+\\
+\includegraphics[scale=1.0]{img/hex.jpg}

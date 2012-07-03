@@ -1,0 +1,84 @@
+%\documentclass[a4paper,twoside,11pt,open=any]{scrbook}
+%damit die erste Seite einer Übung immer links gelocht ist:
+\documentclass[a4paper,twoside,11pt,open=right]{scrbook}
+
+\usepackage{fancyhdr}
+
+\usepackage[utf8]{inputenc}							%für deutsche Sonderzeichen
+\usepackage[ngerman]{babel}									%für deutsches Datum
+\usepackage[babel,german=quotes]{csquotes}	%deutsche Anführungszeichen
+\usepackage[T1]{fontenc}										%für Umlaute und Akzente
+\usepackage{graphicx}												%für Grafiken
+\usepackage{newcent}												%für Skalierbarkeit der Schrift
+\usepackage{amsmath}												%Verbesserung der Formeln
+\usepackage{cancel}													%kürzen in Formeln
+\usepackage{ulem}
+\usepackage{enumitem} 											%Aufzählungen
+
+\usepackage{geometry}
+\geometry{a4paper,left=25mm,right=15mm, top=10mm, bottom=25mm}
+
+\geometry{left=25mm, right=10mm}
+\geometry{top=30mm,bottom=30mm}
+\geometry{headheight=20mm}
+\geometry{headsep=5mm}
+\geometry{footskip=10mm} 
+
+\usepackage{xcolor}
+\definecolor{white} {rgb}{255, 255, 255}
+\definecolor{red} {rgb}{255, 0, 0}
+\usepackage[pdfstartview=FitBH, breaklinks = true, citebordercolor = white, linkbordercolor = white, urlbordercolor  = white]{hyperref}
+\hypersetup
+{
+	pdftitle = {Technische Informatik III: Betriebs- und Kommunikationssysteme},
+	pdfsubject = {Nicolas Lehmann},
+	pdfkeywords = {LaTeX, ti, Technische Informatik, Betriebssysteme, Kommunikationssysteme},
+	pdfauthor = {Nicolas Lehmann},
+}
+
+\renewcommand \thechapter {\arabic{chapter}.\hspace{0.5em}}
+\renewcommand \thesection {Aufgabe \arabic{section}:}
+\usepackage{tocloft} 
+\setlength{\cftsecnumwidth}{5.5em} % damit der lange String "Aufgabe 1" passt
+
+\renewcommand*\chapterheadstartvskip{\vspace*{0mm}}
+
+
+\usepackage{listings}
+\lstset{language=C,numbers=left,xleftmargin=10mm
+,commentstyle=\small\selectfont,basicstyle=\ttfamily\small\selectfont
+}
+
+\usepackage{tabularx}
+
+%\lstset{}
+
+	\fancypagestyle{plain}{
+		\fancyhf{}
+		\fancyhead[OL,ER]{WS 09/10 \\ \today}
+		\fancyhead[C]{\textbf{Betriebs- und Kommunikationssysteme \ifnum0<\arabic{chapter}  - \thechapter Übung \fi}  \\ Tutor: Beshaad Ramez }
+		\fancyhead[OR,EL]{Tom Bullmann \begin{tiny}(4280486)\end{tiny} \\ Nicolas Lehmann \begin{tiny}(4093195)\end{tiny}}
+		\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
+		\fancyfoot[OR,EL]{\smallskip \thepage} %Seitennummer
+		\fancyfoot[C]{\tiny{Freie Universit\"at Berlin\\ Fachbereich Mathematik und Informatik\\ Institut f\"ur Informatik}}
+		\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+	}
+
+\begin{document}
+  \pagestyle{plain}
+  \input{deckblatt}
+  \tableofcontents
+  \clearpage
+  \input{kapitel/uebung01}
+  \input{kapitel/uebung02}
+  \input{kapitel/uebung03}
+  \input{kapitel/uebung04}
+  \input{kapitel/uebung05}
+  \input{kapitel/uebung06}
+  \input{kapitel/uebung07}
+  \input{kapitel/uebung08}
+  \input{kapitel/uebung09}
+  \input{kapitel/uebung10}
+  \input{kapitel/uebung11}
+  \input{kapitel/uebung12}
+\end{document}

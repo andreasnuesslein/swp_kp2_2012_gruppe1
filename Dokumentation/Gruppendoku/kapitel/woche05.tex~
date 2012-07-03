@@ -1,0 +1,32 @@
+\chapter{5\hspace{0.5em}Woche}\label{wo5}
+
+\section{Prototype}\label{wo5_1}
+
+\begin{enumerate}[label={\Roman*)}]
+
+	\item Da die Abgabe der Wochenaufgabe diesmal sehr kurzfristig statt finden sollte, haben wir uns direkt nach dem Treffen
+am Freitag in ein nahegelegenes TU-Geb\"aude begeben und dort unsere User Stories ausgearbeitet und priorisiert.
+	\item Nach der Priorisierung erfolgte noch die Aufteilung in einzelne Aufgaben, die den jeweilgien User Stories
+zugeh\"orig sind.
+	\item Weil wir die Wochenaufgabe bereits am Freitag der Vorwoche erledigt hatten, blieb mehr Zeit f\"ur die eigentlichen
+Aufgaben, welche mit Beginn der praktischen Arbeit anfielen. Daher haben wir uns dazu entschlo\ss{}en, dass sich jeder Gedanken
+macht, welche Programmiersprache und welchen Framework wir nutzen wollen. Bei unserem n\"achsten Teamtreffen am Dienstag
+beschlossen wir dann uns an Scala zu versuchen und einen geeigneten Framework zu ermitteln.
+	\item F\"ur das Kennen lernen des verwendeten Frameworks und um gemeinsam z\"ugig starten zu
+k\"onnen, haben wir uns am Donnerstag noch einmal getroffen und dort die Einarbeitung in verschiedene Frameworks probiert und uns
+im Laufe des Treffens auf Lift geeinigt, da die Einarbeitung dort z\"ugig brauchbare Ergebnisse lieferte und zu Beginn einfach
+erschien.
+	\item Um die Motivation des Teams weiterhin so hoch zu halten, bug ich, auf Wunsch mehrerer Teammitglieder, einen
+Kuchen(folgend gezeigt). Dies wurde dann ein veganer Zupfkuchen, da ich dem Team somit nicht nur einen leckeren Kuchen bieten
+konnte, sondern ihnen auch zeigen konnte, das die vegane Lebensweise mehr zu bieten hat als man zu Beginn denkt. Das Team nahm den
+Kuchen sehr positiv auf und es hat die Arbeitsatmosph\"are merklich aufgelockert.
+\begin{center}
+	\includegraphics[width=17cm]{img/2012-05-17_10-31-00.jpg}
+\end{center}
+	\item Nachdem wir die Nutzung von Scala mit Lift beschlo\ss{}en, vereinbarten wir, uns \"uber das Wochenende in den
+Framework einzuarbeiten und nachzuvollziehen, wie die Registrierung und Speicherung der angelegten User von statten geht um so
+das Grundger\"ust unserer Webseite z\"ugig erarbeiten zu k\"onnen.
+	\item Damit dies bei jedem auf gleichem Stand beginnen kann, haben wir einander geholfen die daf\"ur ben\"otigten
+Programme und Abh\"angigkeiten einzurichten.
+
+\end{enumerate}

@@ -1,0 +1,67 @@
+\chapter{\"Ubung zum 27.11.2009}\label{ue6}
+\section{Asynchrone I/O}\label{ue6_1}
+Asynchrone I/O greift bei n\"otigen Daten\"ubertragungen auf die jeweiligen Ger\"ate zu und gibt den Befehl zum lesen/schreiben und statt nur auf eine Antwort zu warten um den Befehl beenden zu k\"onnen wird in der Zwischenzeit ein anderer Proze\ss\ bearbeitet.\\
+
+Es gibt mehrere Arten asynchroner I/O, die folgend kurz vorgestellt werden:
+\begin{itemize}
+	\item	Proze\ss \\
+		Bei dieser Form wird jeder I/O-Operation ein eigener Proze\ss\ zugewiesen. Dies kann allerdings zu einer nachteiligen Wirkung f\"uhren, weil es eine sehr schwer zu kontrollierende Menge an Operationen sein kann, da viele Operationen viele Prozesse bedeuten.
+
+	\item	Polling \\
+		Beim Polling werden in regelm\"a\ss igen Abst\"anden Anfragen an das jeweilige I/O-Ger\"at gesendet um nachzufragen, ob die Operation schon fertig ausgef\"uhrt wurde oder nicht. Dabei k\"onnen zwei F\"alle auftreten, entweder die Operation ist fertig ausgef\"uhrt und man kann sich dieser Aufgabe wieder zuwenden, oder aber es kommt eine Errormessage, die besagt, dass die Operation noch nicht vollst\"andig ausgef\"uhrt wurde.
+
+	\item	Select loops \\
+		Bei dieser Variante werden die I/O-Operationen initialisiert und danach wird mittels Systemcall in den Sleep-Modus gewechselt bis die I/O-Operation abgeschlossen ist, was mittels Timeout oder Signal(z.B. wenn ein Kindproze\ss\ terminiert) mitgeteilt wird.
+
+	\item	Interrupts \\
+		Wie der Name schon vermuten l\"asst, werden bei dieser Variante Anfragen an das I/O-Ger\"at gesendet und dann werden andere Aufgaben durchgef\"uhrt bis von dem I/O-Ger\"at ein Interrupt kommt, der meldet, dass es fertig ist und mit der Aufgabe fortgefahren werden kann.
+
+	\item	Callback Functions \\
+		\"Ahnlich der Interrupt-Methode, jedoch gibt es bei Fertigstellung der I/O-Operation nicht ein Signal zur\"uck, sondern jede I/O-Anfrage hat eine eigene R\"uckgabefunktion(Callback function)
+
+	\item	LWP bzw. Threads \\
+		Diese Methode ist \"ahnlich der Proze\ss -Methode, jedoch werden keine eigenst\"andigen Prozesse verwendet, sondern Threads oder Leicht-gewichtige Prozesse. Dabei nutzt allerdings jeder Thread selbst synchrone I/O.
+
+	\item	Completion queues \\
+		Hierbei werden die Benachrichtigungen der Fertigstellung der Aufgabe in einer synchronisierten Reihe(queue) zur\"uck gegeben und zwars in der Reihenfolge, in der sie fertig gestellt wurden.
+
+	\item	Event flags \\
+		Dies ist prinzipiell eine Completion queue, nur besitzt jeder unbearbeitete, aber fertig gestellte(im Sinne der I/O-Operation), Proze\ss\ eine Flag, diese zeigt dann an, welcher Proze\ss\ aus der Liste(queue) als n\"achstes bearbeitet werden kann.
+\end{itemize}
+
+Bei synchroner I/O wird die I/O-Operation initialisiert und dann wird abgewartet bis die Operation fertig ist, es wird also weder der Prozessor genutzt noch irgendeine Art von Operation ausgef\"uhrt w\"ahrend man wartet.\\
+\\
+Non-Blocking I/O ist entweder das gleiche wie Asynchrone I/O oder es ist das was man bei Asynchroner I/O unter Polling versteht, das konnten wir nicht exakt ermitteln.
+
+
+
+\begin{color}{red}{wird noch bearbeitet}
+\end{color}
+\section{FAT 16}\label{ue6_2}
+Dem FAT-Dateisystem liegen vier grundlegende Regionen zugrunde:\footnote{Quelle: \textit{FAT: General Overview of On-Disk Format, Version 1.03, December 6, 2000, Microsoft Corporation}}
+\begin{enumerate}
+	\item Reservierter Bereich
+	\item Inhaltsverzeichnis
+	\item Wurzelverzeichnis
+	\item Datei- und Verzeichnisdaten
+\end{enumerate}
+Offensichtlich wurde dem Wurzelverzeichnis also eine spezielle Region zugeteilt, wodurch sich schon mal ein grundlegender Unterschied in der Speicherkapazit\"at begr\"undet sieht.\\
+Im BIOS-Parameter Block (BPB) innerhalb des reservierten Bereichs ist unter anderem der Wert \textbf{RootEntCnt} spezifiziert, welcher die Anzahl der Eintr\"age im Wurzelverzeichnis angibt. Aus Kompatibilit\"atsgr\"unden ist der Wert i.d.R. \textbf{512}. Im Wurzelverzeichnis k\"onnen dann nur 512 32-Byte-Eintr\"age hinterlegt werden. M\"oglich sind jedoch auch andere Werte als 512, solange das Produkt der Zahl und 32 ein gerades Vielfache des Wertes \textbf{BytsPerSec} ist. Letzterer ist seinerseits 512, 1024, 2048 oder 4096.\\
+Insgesamt k\"onnen mit FAT16 maximal $2^{16}$ Sektoren angesprochen werden. Wieviele genau, spezifiziert der Wert \textbf{TotSec16}, der mit 16 Bit eben maximal den Wert $65.536$ annimmt. Die Anzahl der Sektoren gilt jedoch f\"ur alle vier Regionen des FAT-Dateisystems. In einem Unterverzeichnis k\"onnen also maximal (wenn keine anderen Unterverzeichnisse des Wurzelverzeichnis Daten enthalten) die folgende Anzahl Eintr\"age enthalten sein: \medskip \\
+Im Root-Verzeichnis befinden sich 512 Eintr\"age a 32 Byte, wof\"ur bei 512 Byte pro Sektor 32 Sektoren ben\"otigt werden. 12 Sektoren werden zudem von FAT16 selbst in Beschlag genommen. \medskip \\
+\begin{tabular}[t]{rrl}
+	  & 65.536 & TotSec16 \\
+  $-$ & 1 & Reservierter Bereich \\
+  $-$ & 11 & Inhaltsverzeichnis \\
+  $-$ & 32 & Wurzelverzeichnis \\
+  \hline
+  $=$ & 65.492 & Sektoren f\"ur Daten im Unterverzeichnis \\
+  $\widehat{=}$ & 1.047.872 & 32-Byte-Eintr\"age (bei 512 BytsPerSec)
+\end{tabular}
+\section{Programmieren in C}\label{ue6_3}
+cat.c
+\lstinputlisting[breaklines=true]{src/u6/cat.c}
+wc.c
+\lstinputlisting[breaklines=true]{src/u6/wc.c}
+grep.c
+\lstinputlisting[breaklines=true]{src/u6/grep.c}

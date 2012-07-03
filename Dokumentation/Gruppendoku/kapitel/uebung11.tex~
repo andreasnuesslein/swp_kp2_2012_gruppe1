@@ -1,0 +1,24 @@
+\chapter{\"Ubung zum 22.01.2010}\label{ue11}
+\section{Bit-Stuffing}\label{ue11_1}
+Beim Bit-Stuffing wird bei der Übertragung jedem Frame die Bit-Folge 0111110 vorangestellt. Falls innerhalb des zu übertragenden Datenstroms fünf aufeinander folgende Einsen auftauchen, so wird zur Vermeidung der Verwechslung mit dem Flag-Byte eine 0 eingefügt. Auf Empfängerseite wird die Null entsprechend vor Hinaufreichen in die Vermittlungsschichtschicht wieder entfernt.\\
+Notwendig ist das Bitstuffing also zum Einen um der Verwechslung von Daten-Bit-Folgen mit Steuerzeichen wie der Start-Markierung auszuschließen. Die Startmarkierung ist notwendig, damit der Empfänger weiß, wann das zu empfangende Paket beginnt. \\
+Ein weiterer Einsatzzweck von Bitstuffing tritt auf, wenn sehr lange Folgen von Nullen oder Einsen übertragen werden. In diesem Fall laufen Sender und Empfänger Gefahr, mit ihrem Takt auseinanderzulaufen. Erfolgt kein Wechsel zwischen 0 und 1 ist es nicht möglich zu bemerken, wann ein Takt vorbei ist. Auch hier wird Bit-Stuffing verwendet um in diesen Fällen einen Taktwechsel künstlich zu markieren - auf Empfängerseite wird das informationslose Bit wieder entfernt.
+\section{Ethernet}\label{ue11_2}
+\begin{tabularx}{\linewidth}{lXXX}
+ \hline
+   & 10Base-T & 100Base-TX & 1000Base-CX \\
+ \hline
+   Frequenzen & 16 MHz & 125 MHz & 250 MHz \\
+ \hline
+   Bandbreiten & 10 Mbit/s & 100 Mbit/s & 1 Gbit/s \\
+ \hline
+   Modulationen & & & \\
+ \hline
+   Codierung & & 4B5B-Codierung & 8B10B-Codierung \\
+ \hline
+   Kabel & TP, 100m & 2 mal UTP Cat 5 & Kupferkabel, 8 Adern, 25m \\
+ \hline
+\end{tabularx}
+\section{Programmieren in C}\label{ue11_3}
+CRC16.c
+%\lstinputlisting[breaklines=true]{src/u10/webserver.c}
