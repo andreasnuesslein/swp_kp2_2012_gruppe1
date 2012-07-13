@@ -30,14 +30,14 @@
 \usepackage[pdfstartview=FitBH, breaklinks = true, citebordercolor = white, linkbordercolor = white, urlbordercolor  = white]{hyperref}
 \hypersetup
 {
-	pdftitle = {Softwareprojekt: Kundenprojekt II: Webtechnologien},
+	pdftitle = {Softwareprojekt: Kundenprojekt II: Webtechnologien, Gruppendokumentation},
 	pdfsubject = {Tom Bullmann},
 	pdfkeywords = {LaTeX, swp, Softwareprojekt},
 	pdfauthor = {Tom Bullmann},
 }
 
-\renewcommand \thechapter {}
-\renewcommand \thesection {Maintask:}
+\renewcommand \thechapter {\Roman{chapter}}
+\renewcommand \thesection {\arabic{section}}
 \usepackage{tocloft} 
 \setlength{\cftsecnumwidth}{5.5em} % damit der lange String "Aufgabe 1" passt
 
@@ -70,13 +70,10 @@
   \input{deckblatt}
   \tableofcontents
   \clearpage
-  \input{kapitel/woche01}
-%  \input{kapitel/woche02}
-%  \input{kapitel/woche03}
-%  \input{kapitel/woche04}
-%  \input{kapitel/woche05}
-%  \input{kapitel/woche06}
-%  \input{kapitel/woche07}
-%  \input{kapitel/woche08}
-%  \input{kapitel/woche09}
+  \input{kapitel/introduction}
+  \input{kapitel/emphasise}
+  \input{kapitel/define}
+  \input{kapitel/ideate}
+  \input{kapitel/paperprototype}
+  \input{kapitel/prototype}
 \end{document}

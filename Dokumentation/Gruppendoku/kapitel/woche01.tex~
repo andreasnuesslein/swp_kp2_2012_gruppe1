@@ -2,7 +2,7 @@
 
 \section{Emphasise}\label{wo1_1}
   
-\begin{enumerate}[label={\alph*)}]
+\begin{enumerate}[label={\Roman*)}]
 	\item Gedanken \"uber m\"ogliche Fragen bez\"uglich der Reisegewohnheiten einer Person w\"ahrend der Arbeit und im
 privaten    Bereich
 	\item Vertiefung des vorhandenen Wissens \"uber intermodales Reisen

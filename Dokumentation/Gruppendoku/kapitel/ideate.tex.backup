@@ -1,0 +1,33 @@
+\chapter{Ideate}\label{wo4}
+
+\section{Paper-Prototype}\label{wo4_1}
+
+\begin{enumerate}[label={\Roman*}]
+	\item Erarbeitung des Paper-Prototypes f\"ur die Planung von Taxifahrten mit dem Schwerpunkt Wolfsburg.
+	\item Im Teamtreffen trugen wir die Ideen zusammen und koordinierten die Vorteile unserer Einzell\"osungen.
+	\begin{enumerate}[label={\arabic*}]
+		\item Dabei war ein Hauptproblem die Koordinierung der Gruppe, das Verstehen von einzelnen Vor- und Nachteilen
+der jeweiligen Ideen, weshalb ich vermehrt versucht habe anderen im Team zu erkl\"aren was an welcher
+Idee gut ist und so versucht habe z\"ugiger voran zu kommen. 
+		\item W\"ahrend dem Teamtreffen haben wir uns auf eine finale L\"osung geeinigt, welche wir grob ausarbeiteten.
+Die Nachbearbeitung erfolgte Zuhause, in digitaler Form, erneut, jedoch von einem anderen Teammitglied.
+		\item Nach der Ausarbeitung des Prototypen haben wir uns einen Kommilitonen, welcher am Projekt selbst
+unbeteiligt ist, als Tester gesucht und mit diesem dann den Prototypen getestet und auch erste Schwachstellen ermittelt.
+		\item Diese Schwachstellen waren zun\"achst \"ubersichtlicher Natur, weswegen wir sie nachbearbeiteten.
+	\end{enumerate}
+	\item Im Treffen am Freitag haben wir dann den finalen Prototypen getestet, an 3 verschiedenen Nutzern, und teilweise
+unterschiedliches Feedback erhalten, aber teilweise auch gleiches Feedback.
+	\begin{enumerate}[label={\arabic*}]
+		\item Das Hauptproblem bei unserer Ausarbeitung war die Namensgebung, wir nutzten Aktive Reisen f\"ur die selbst
+geplanten Reisen, dies verwirrte alle Nutzer, da es den Schlu\ss{} zulies dort bereits aktive Reisen anderer zu sehen, was
+allerdings nicht geplant war.
+		\item Wir testeten an 2 Nutzern zuerst die Webseitenversion unseres Prototypen und danach die Appversion, bei
+diesen beiden Tests gab es reichlich Feedback zur Webseite aber nur geringf\"ugig zur App, da das Konzept bereits bekannt war
+und, laut Aussagen der Tester, sogar einfacher und sch\"oner war.
+		\item Am dritten und letzten Tester tauschten wir die Reihenfolge und erhielten unerwartet viel Feedback zur
+Gestaltung unserer Elemente in der Appversion, da diese zuvor gut ankam und als einfach und einleuchtend beschrieben wurde, somit
+haben wir zu beiden Versionen schlie\ss{}lich einiges an Feedback erhalten was wir im Nachhinein verarbeiten konnten.
+		\item Alles in Allem war das Feedback jedoch nur geringf\"ugig, es waren also keinerlei gr\"o\ss{}ere
+\"Anderungen notwendig die ein erneutes Testen der angepassten Version veranlassen w\"urden.
+	\end{enumerate}
+\end{enumerate}

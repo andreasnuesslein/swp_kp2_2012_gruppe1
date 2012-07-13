@@ -4,7 +4,7 @@ img_extIsRegExp=false
 img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
 kileprversion=2
 kileversion=2.1.0
-lastDocument=kapitel/woche08.tex
+lastDocument=kapitel/prototype.tex
 masterDocument=
 name=Softwareprojekt: Kundenprojekt II - Webtechnologien
 pkg_extIsRegExp=false
@@ -24,7 +24,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche01.tex]
+[document-settings,item:kapitel/define.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -32,7 +32,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche02.tex]
+[document-settings,item:kapitel/emphasise.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -40,7 +40,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche03.tex]
+[document-settings,item:kapitel/ideate.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -48,7 +48,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche04.tex]
+[document-settings,item:kapitel/introduction.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -56,7 +56,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche05.tex]
+[document-settings,item:kapitel/paperprototype.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -64,39 +64,7 @@ Indentation Mode=none
 Mode=LaTeX
 ReadWrite=true
 
-[document-settings,item:kapitel/woche06.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=none
-Mode=LaTeX
-ReadWrite=true
-
-[document-settings,item:kapitel/woche07.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=none
-Mode=LaTeX
-ReadWrite=true
-
-[document-settings,item:kapitel/woche08.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=none
-Mode=LaTeX
-ReadWrite=true
-
-[document-settings,item:kapitel/woche09.tex]
-Bookmarks=
-Encoding=UTF-8
-Highlighting=LaTeX
-Indentation Mode=none
-Mode=LaTeX
-ReadWrite=true
-
-[document-settings,item:kapitel/woche10.tex]
+[document-settings,item:kapitel/prototype.tex]
 Bookmarks=
 Encoding=UTF-8
 Highlighting=LaTeX
@@ -122,104 +90,64 @@ mode=LaTeX
 open=false
 order=1
 
-[item:kapitel/woche01.tex]
+[item:kapitel/define.tex]
 archive=true
 column=0
 encoding=UTF-8
 highlight=LaTeX
-line=5
-mode=LaTeX
-open=false
-order=2
-
-[item:kapitel/woche02.tex]
-archive=true
-column=31
-encoding=UTF-8
-highlight=LaTeX
-line=4
-mode=LaTeX
-open=false
-order=3
-
-[item:kapitel/woche03.tex]
-archive=true
-column=48
-encoding=UTF-8
-highlight=LaTeX
-line=18
-mode=LaTeX
-open=false
-order=3
-
-[item:kapitel/woche04.tex]
-archive=true
-column=16
-encoding=UTF-8
-highlight=LaTeX
-line=31
-mode=LaTeX
-open=false
-order=7
-
-[item:kapitel/woche05.tex]
-archive=true
-column=44
-encoding=UTF-8
-highlight=LaTeX
-line=28
-mode=LaTeX
-open=false
-order=5
-
-[item:kapitel/woche06.tex]
-archive=true
-column=16
-encoding=UTF-8
-highlight=LaTeX
-line=36
-mode=LaTeX
-open=false
-order=6
-
-[item:kapitel/woche07.tex]
-archive=true
-column=16
-encoding=UTF-8
-highlight=LaTeX
-line=4
-mode=LaTeX
-open=false
-order=4
-
-[item:kapitel/woche08.tex]
-archive=true
-column=121
-encoding=UTF-8
-highlight=LaTeX
-line=28
+line=2
 mode=LaTeX
 open=false
 order=1
 
-[item:kapitel/woche09.tex]
+[item:kapitel/emphasise.tex]
 archive=true
-column=35
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=4
+line=1
+mode=LaTeX
+open=true
+order=1
+
+[item:kapitel/ideate.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=2
 mode=LaTeX
 open=false
+order=3
+
+[item:kapitel/introduction.tex]
+archive=true
+column=37
+encoding=UTF-8
+highlight=LaTeX
+line=6
+mode=LaTeX
+open=true
 order=2
 
-[item:kapitel/woche10.tex]
+[item:kapitel/paperprototype.tex]
 archive=true
-column=11
+column=0
 encoding=UTF-8
 highlight=LaTeX
-line=5
+line=2
 mode=LaTeX
 open=false
+order=6
+
+[item:kapitel/prototype.tex]
+archive=true
+column=51
+encoding=UTF-8
+highlight=LaTeX
+line=34
+mode=LaTeX
+open=true
 order=3
 
 [item:softwareprojekt:kundenprojektii-webtechnologien.kilepr]
@@ -234,58 +162,42 @@ order=-1
 
 [item:swp_kp2_2012.tex]
 archive=true
-column=28
+column=2
 encoding=UTF-8
 highlight=LaTeX
-line=18
+line=73
 mode=LaTeX
-open=false
+open=true
 order=0
 
 [view-settings,view=0,item:deckblatt.tex]
 CursorColumn=85
 CursorLine=16
 
-[view-settings,view=0,item:kapitel/woche01.tex]
+[view-settings,view=0,item:kapitel/define.tex]
 CursorColumn=0
-CursorLine=5
+CursorLine=2
 
-[view-settings,view=0,item:kapitel/woche02.tex]
-CursorColumn=31
-CursorLine=4
+[view-settings,view=0,item:kapitel/emphasise.tex]
+CursorColumn=0
+CursorLine=1
 
-[view-settings,view=0,item:kapitel/woche03.tex]
-CursorColumn=48
-CursorLine=18
+[view-settings,view=0,item:kapitel/ideate.tex]
+CursorColumn=0
+CursorLine=2
 
-[view-settings,view=0,item:kapitel/woche04.tex]
-CursorColumn=16
-CursorLine=31
+[view-settings,view=0,item:kapitel/introduction.tex]
+CursorColumn=37
+CursorLine=6
 
-[view-settings,view=0,item:kapitel/woche05.tex]
-CursorColumn=44
-CursorLine=28
+[view-settings,view=0,item:kapitel/paperprototype.tex]
+CursorColumn=0
+CursorLine=2
 
-[view-settings,view=0,item:kapitel/woche06.tex]
-CursorColumn=16
-CursorLine=36
-
-[view-settings,view=0,item:kapitel/woche07.tex]
-CursorColumn=16
-CursorLine=4
-
-[view-settings,view=0,item:kapitel/woche08.tex]
-CursorColumn=121
-CursorLine=28
-
-[view-settings,view=0,item:kapitel/woche09.tex]
-CursorColumn=35
-CursorLine=4
-
-[view-settings,view=0,item:kapitel/woche10.tex]
-CursorColumn=11
-CursorLine=5
+[view-settings,view=0,item:kapitel/prototype.tex]
+CursorColumn=51
+CursorLine=34
 
 [view-settings,view=0,item:swp_kp2_2012.tex]
-CursorColumn=28
-CursorLine=18
+CursorColumn=2
+CursorLine=73

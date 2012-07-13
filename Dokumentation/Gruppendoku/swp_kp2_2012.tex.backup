@@ -71,7 +71,7 @@
   \tableofcontents
   \clearpage
   \input{kapitel/introduction}
-%  \input{kapitel/analysis}
+%  \input{kapitel/woche02}
 %  \input{kapitel/woche03}
 %  \input{kapitel/woche04}
 %  \input{kapitel/woche05}
