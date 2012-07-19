@@ -1,0 +1,14 @@
+%webservice
+\subsection{Installation guide - Webservice}\label{ssec:WebInst}
+
+\textbf{1.} Grab play from http://www.playframework.org/ and install it.
+
+\textbf{1.1.} Basically it is: unzip, add to \$PATH and run it. Or follow these instructions:
+http://www.playframework.org/documentation/2.0.2/Installing\\
+\textbf{2.} Set up a mysql-database for this project, e.g.:
+
+CREATE DATABASE tawusel; GRANT ALL ON tawusel.* TO tawusel@localhost IDENTIFIED BY 'pass'; (if you want to use other credentials,
+change file conf/application.conf accordingly)\\
+\textbf{3.} In the project's root folder (i.e. here) run play run\\
+
+Point web browser to http://localhost:9000/

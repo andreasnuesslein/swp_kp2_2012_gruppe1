@@ -1,6 +1,0 @@
-\chapter{\"Ubung zum 11.12.2009}\label{ue7}
-\section{Programmieren in c}\label{ue7_1}
-readonlyfs.c
-\lstinputlisting[breaklines=true]{src/u7/readonlyfs.c}
-wc.c
-\lstinputlisting[breaklines=true]{src/u7/readonlyfs.h}
