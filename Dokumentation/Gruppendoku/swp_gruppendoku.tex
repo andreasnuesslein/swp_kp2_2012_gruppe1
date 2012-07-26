@@ -34,20 +34,25 @@
 \definecolor{lightgray}{rgb}{.2,.2,.2}
 \definecolor{darkgreen}{rgb}{0,.4,0}
 
+\hypersetup{colorlinks, pdfauthor={Tom Bullmann, Andreas N\"u\ss{}lein, Sebastian Schulz, Mareike Ziese},
+	pdftitle={TaWusel},
+	pdfnewwindow=true, linkcolor=black, citecolor=black,
+	filecolor=darkgreen, urlcolor=blue}
+
 %formatierung der listings
 \renewcommand{\lstlistingname}{Code listings}
-\lstset{																									
+\lstset{
 	tabsize=2,
 	%kleine schriftgröße
-	basicstyle=\footnotesize \bfseries\ttfamily, 							
-	keywordstyle=\color{wine},														
-	identifierstyle=\mdseries \color{black},									
-	commentstyle=\itshape\mdseries\color{darkgreen},					
-	stringstyle=\ttfamily, 																		
+	basicstyle=\footnotesize \bfseries\ttfamily,
+	keywordstyle=\color{wine},
+	identifierstyle=\mdseries \color{black},
+	commentstyle=\itshape\mdseries\color{darkgreen},
+	stringstyle=\ttfamily,
 	showstringspaces=false,
 	stringstyle=\color{darkblue},
 	%chars to escape inline = (*this is escaped*)
-	escapeinside={(*@}{@*)},																	
+	escapeinside={(*@}{@*)},
 	language=Java
 }
 
@@ -69,20 +74,20 @@
 
 \lstset{
 	emph={logger,
-				properties,
-				dbConnection,
-				instance
-			 },	
+		properties,
+		dbConnection,
+		instance
+	},
 	emphstyle= {\itshape \color{darkblue}},
 }
-      
-	
-%variablen	
+
+
+%variablen
 \newcommand{\code}[1]{{\small\ttfamily #1}}
 \newcommand{\codeCap}[1]{\textsc{\small #1}}
-	
+
 \begin{document}
-			
+
 	%kopf- und fußzeilen
 	\setlength{\headheight}{28pt}
 	\pagestyle{fancy}
@@ -90,25 +95,25 @@
 	\lhead{Team 1}
 	\chead{\textbf{SWPt: Kundenprojekt II - Webtechnologien} \\ Dozentin: Prof. Dr. M\"uller-Birn}
 	\rhead{SS 12 \\ \today}
-	\cfoot{\tiny{Freie Universit\"at Berlin\\ Fachbereich Mathematik und Informatik\\ Institut f\"ur Informatik}}	
+	\cfoot{\tiny{Freie Universit\"at Berlin\\ Fachbereich Mathematik und Informatik\\ Institut f\"ur Informatik}}
 	\rfoot{\smallskip \thepage}
 	\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
-	
+
 	%kopf und fußzeilen für alle seiten (auch inhalt und anhang)
 	\fancypagestyle{plain}{
     \fancyhf{}
 		\lhead{Team 1}
 		\chead{\textbf{SWP: Kundenprojekt II - Webtechnologien} \\ Dozentin: Prof. Dr. M\"uller-Birn}
 		\rhead{SS 12 \\ \today}
-		\cfoot{\tiny{Freie Universit\"at Berlin\\ Fachbereich Mathematik und Informatik\\ Institut f\"ur Informatik}}	
+		\cfoot{\tiny{Freie Universit\"at Berlin\\ Fachbereich Mathematik und Informatik\\ Institut f\"ur Informatik}}
 		\rfoot{\smallskip \thepage}
 		\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie	
 	}
-	
+
 	\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 	\newcommand{\emptyRow}{\medskip \noindent}
 
-	
+
 	%römische bezifferung
 	\pagenumbering{Roman}
 	\setcounter{page}{0}
@@ -120,30 +125,30 @@
 
 	%deckblatt
 	\input{chapter/0_cover}
-		
-	%inhaltsverzeichnis 
+
+	%inhaltsverzeichnis
 	\clearpage
 	\addcontentsline{toc}{chapter}{Table of contents} 
-	\tableofcontents 
-	
+	\tableofcontents
+
 	%abbildungsverzeichnis
 	\clearpage
 	\addcontentsline{toc}{chapter}{Table of figures}
 	\listoffigures
-	
+
 	%tabellenverzeichnis
 	\clearpage
 	\addcontentsline{toc}{chapter}{List of tables}
 	\listoftables
-	
+
 	%Listingsverzeichnis
 	\clearpage
 	\addcontentsline{toc}{chapter}{Code listings}
 	\renewcommand{\lstlistlistingname}{Code listings}
 	\lstlistoflistings
-		
+
 	\clearpage
-	
+
 	%abstand im inhaltsverzeichnis
 	\addtocontents{toc}{\protect\vspace*{0.6\baselineskip}}
 	
@@ -201,7 +206,7 @@
 %	\def\btxmastthesis{Ausarbeitung}
 %	\def\btxvolumelong{Auflage}
 %	\def\btxandlong{und}
-%	\bibliographystyle{mygeralpha}  
+%	\bibliographystyle{mygeralpha}
 %	\bibliography{literatur}
 
 \end{document}
