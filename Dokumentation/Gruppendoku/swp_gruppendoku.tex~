@@ -37,17 +37,21 @@
 %formatierung der listings
 \renewcommand{\lstlistingname}{Code listings}
 \lstset{															
+									
 	tabsize=2,
 	%kleine schriftgröße
 	basicstyle=\footnotesize \bfseries\ttfamily, 							
 	keywordstyle=\color{wine},												
+	
 	identifierstyle=\mdseries \color{black},									
 	commentstyle=\itshape\mdseries\color{darkgreen},					
 	stringstyle=\ttfamily, 													
+				
 	showstringspaces=false,
 	stringstyle=\color{darkblue},
 	%chars to escape inline = (*this is escaped*)
 	escapeinside={(*@}{@*)},												
+				
 	language=Java
 }
 
