@@ -8,19 +8,19 @@ interesting functionality, like functional programming or use of plain Java-code
 With the programming language chosen, a big step had been done, but another big one was not yet done, as we did not know which
 framework we should use with Scala. As every member of the team did not have any experience in working with Scala, we did some
 research and tried what we thought could be a possible option. That way we could gain a little insight into the framework and how
-it works and what it has to offer. At this point in time we tried Play2.0(\url{http://www.playframework.org/}) and
+it works and what it has to offer. At this point in time we tried Play!2(\url{http://www.playframework.org/}) and
 Lift(\url{http://liftweb.net/}). Due to its simplicity in programming and the efficiency of the written code, we decided to use
 Lift.\newline
 With these decisions done, the next step to go was to create a basic website and some basic functionality, as planned for the
 first iteration, in which we did plan on having some time to get friendly with a new framework and a new language.
 Half a week later, with a very busy weekend for every team member, we evaluated if Lift was indeed a good choice and if we are
 confident to be able to create a product as planned in the given time slot.
-Unfortunately we all had the same thoughts about Lift and came to the solution that it would be better if we would use Play2.0 as
+Unfortunately we all had the same thoughts about Lift and came to the solution that it would be better if we would use Play!2 as
 its use is not as complicated as it is with Lift. Lift is very efficient when it comes to written code and its results, but to
 understand what is going on in the framework, so that we could create a good product the way we want it to be, would have needed
 more time for familiarizing. But time was not that abundant, as we had a deadline every two weeks until which we had to have a
 presentable result.
-For that reason we did fall back onto Play2.0 and had to invest more time as planned for the first iteration as we were out of
+For that reason we did fall back onto Play!2 and had to invest more time as planned for the first iteration as we were out of
 plan already without even having anything to use.
 
 \subsection{Description}\label{ssec:WebDesc}
@@ -83,6 +83,24 @@ again, then it is probably a good choice to reset this specific favorite.\newlin
 
 \subsection{Architecture}\label{ssec:WebArchitecture}
 
+With using the Play!2 framework, the basic structure of the program is predetermined and modular(see
+\footnote{\url{http://www.playframework.org/documentation/2.0.2/Anatomy}}).
+In the app-folder most of the programming files are to be found, with the exception of .css and .js files.
+Apart from the programming files there are some very import files which are necessary for setting up the software.
+These are the application.conf in the conf-folder, the routes-file in the conf-folder, the Build.scala and the plugins.sbt,
+they are mainly used for configuring the application. Aside from that the routes-file is being used for handling incoming
+requests and therefore it contains the REST-API, as every request has to be declared in this file.
+Another important part in Play!2 is the evolutions-folder, which is contained in the conf-folder. Using evolutions is a pretty
+way to apply necessary changes onto a running system which should not lose any of its data. But the downside is, that Play!2 uses
+ANORM, which is not that capable as simple SQL. Even so Play!2 uses ANORM, you have to use SQL-queries either way, but with the
+restrictions that come along with ANORM, as noted in the database section of this documentation.
+For example ANORM is not able to handle two joins onto the same data table, even so simple SQL allows the separation of these
+two tables, or more complex queries, obviously ANORM needs to be improved quite a bit to be usable without workarounds for the
+really interesting tasks you wish to do.\newline
+
+On the other hand, Play!2 with Scala is a framework that does not need that much orientation to get to the first results, only if
+you want to deep in digger and do more complex work you need to have some time, as the documentation of Play!2 with Scala is not
+yet that big.
 
 \subsection{Installation guide - Webservice}\label{ssec:WebInst}
 

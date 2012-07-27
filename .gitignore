@@ -10,3 +10,4 @@
 *.tex~
 *.tcp
 .gitignore~
+*.tex.backup

@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% GENERELLE EINSTELLUNGEN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
@@ -30,221 +29,6 @@
 \usepackage{subcaption}
 \usepackage{wrapfig}
 \usepackage{abstract}
-
-%r‰nder anpassen
-\geometry{a4paper, top=28mm, left=27mm, right=26mm, bottom=30mm, headsep=8mm, footskip=12mm}
-
-%farben f¸r den text (listings definieren)
-\definecolor{darkblue}{rgb}{0,0,.5}
-\definecolor{wine}{rgb}{0.53,0.047,0.047}
-\definecolor{lightgray}{rgb}{.2,.2,.2}
-\definecolor{darkgreen}{rgb}{0,.4,0}
-
-\hypersetup{colorlinks, pdfauthor={Tom Bullmann, Andreas N\"u\ss{}lein, Sebastian Schulz, Mareike Ziese},
-	pdftitle={TaWusel},
-	pdfnewwindow=true, linkcolor=black, citecolor=black,
-	filecolor=darkgreen, urlcolor=blue}
-
-%formatierung der listings
-\renewcommand{\lstlistingname}{Code listings}
-\lstset{
-	tabsize=2,
-	%kleine schriftgrˆﬂe
-	basicstyle=\footnotesize \bfseries\ttfamily,
-	keywordstyle=\color{wine},
-	identifierstyle=\mdseries \color{black},
-	commentstyle=\itshape\mdseries\color{darkgreen},
-	stringstyle=\ttfamily,
-	showstringspaces=false,
-	stringstyle=\color{darkblue},
-	%chars to escape inline = (*this is escaped*)
-	escapeinside={(*@}{@*)},
-	language=Java
-}
-
-\lstset{
-	numbers=left,
-	numberstyle=\scriptsize,
-	stepnumber=1,
-	numbersep=5pt
-}
-
-\lstset{
-	captionpos=t,
-	frame=single,
-	frameround=tttt,
-	breaklines=true,
-	breakatwhitespace=true,
-	showlines=true,
-}
-
-\lstset{
-	emph={logger,
-		properties,
-		dbConnection,
-		instance
-	},
-	emphstyle= {\itshape \color{darkblue}},
-}
-
-
-%variablen
-\newcommand{\code}[1]{{\small\ttfamily #1}}
-\newcommand{\codeCap}[1]{\textsc{\small #1}}
-
-\begin{document}
-
-	%kopf- und fuﬂzeilen
-	\setlength{\headheight}{28pt}
-	\pagestyle{fancy}
-	\fancyhf{}
-	\lhead{Team 1}
-	\chead{\textbf{SWP: Client project II - Web technologies} \\ Lecturer: Prof. Dr. M\"uller-Birn}
-	\rhead{SS 12 \\ \today}
-	\cfoot{\tiny{Free University of Berlin\\ Department of Mathematics and Computer Science\\
-Institute of Computer Science}}	
-	\rfoot{\smallskip \thepage}
-	\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
-
-	%kopf und fuﬂzeilen f¸r alle seiten (auch inhalt und anhang)
-	\fancypagestyle{plain}{
-    \fancyhf{}
-		\lhead{Team 1}
-		\chead{\textbf{SWP: Client project II - Web technologies} \\ Lecturer: Prof. Dr. M\"uller-Birn}
-		\rhead{SS 12 \\ \today}
-		\cfoot{\tiny{Free University of Berlin\\ Department of Mathematics and Computer Science\\ Institute of Computer
-Science}}	
-		\rfoot{\smallskip \thepage}
-		\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie	
-	}
-
-	\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
-	\newcommand{\emptyRow}{\medskip \noindent}
-
-
-	%rˆmische bezifferung
-	\pagenumbering{Roman}
-	\setcounter{page}{0}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% VORBEMERKUNGEN & VERZEICHNISSE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-
-	%deckblatt
-	\input{chapter/0_cover}
-
-	%inhaltsverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{Table of contents} 
-	\tableofcontents
-
-	%abbildungsverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{Table of figures}
-	\listoffigures
-
-	%tabellenverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{List of tables}
-	\listoftables
-
-	%Listingsverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{Code listings}
-	\renewcommand{\lstlistlistingname}{Code listings}
-	\lstlistoflistings
-
-	\clearpage
-
-	%abstand im inhaltsverzeichnis
-	\addtocontents{toc}{\protect\vspace*{0.6\baselineskip}}
-	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% HAUPTTEIL
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	%seiten in arabisch durchnummerieren
-	\clearpage
-	\pagenumbering{arabic}
-	\setcounter{page}{1}
-
-	%einleitung
-	%\chapter{Introduction}\label{chp:Intr}
-	\input{chapter/1_introduction}
-
-	%anforderungsanalyse
-	\chapter{Requirement engineering}\label{chp:ReqE}
-	\input{chapter/2_requirement_engineering}
-
-	%Modellierung
-	\chapter{Modeling}\label{chp:Mod}
-	\input{chapter/3_modeling}	
-		
-	%conception
-	\chapter{Conception}\label{chp:Conc}
-	\input{chapter/4_conception}
-	
-	%paper prototype
-	\chapter{Paper prototype}\label{chp:PapP}
-	\input{chapter/5_paper_prototype}
-	
-	%prototype
-	\chapter{Prototype implementation}\label{chp:Prot}
-	\input{chapter/6_prototype}
-	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% LITERATURVERZEICHNIS & ANHƒNGE 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-	\clearpage
-	
-	%abstand im inhaltsverzeichnis
-	\addtocontents{toc}{\protect\vspace*{0.5\baselineskip}}
-	
-	%appendix
-	\clearpage
-	\appendix
-	\input{chapter/7_appendix}
-	
-	%literaturverzeichnis
-%	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-	
-	%nicht-zitierte BibTeX-Eintr‰ge anzeigen
-%	\def\btxmastthesis{Ausarbeitung}
-%	\def\btxvolumelong{Auflage}
-%	\def\btxandlong{und}
-%	\bibliographystyle{mygeralpha}
-%	\bibliography{literatur}
-
-\end{document}
-=======
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% GENERELLE EINSTELLUNGEN
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-
-%dokumentenklasse
-\documentclass[a4paper,oneside,12pt,titlepage,chapterprefix]{scrreprt}
-
-%packages
-\usepackage[english]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern} 
-\usepackage{graphicx}
-\usepackage{setspace}
-\usepackage{fancyhdr}
-\usepackage[header=plain, number=none, toc=true]{glossary}
-\usepackage{url}
-\usepackage{booktabs}
-\usepackage{paralist}
-\usepackage{enumitem}
-\usepackage[bookmarksnumbered=true]{hyperref}
-\usepackage{color}
-\usepackage{listings}
-\usepackage{floatflt}
-\usepackage{geometry}
-\usepackage{pdfpages}
 
 %r�nder anpassen
 \geometry{a4paper, top=28mm, left=27mm, right=26mm, bottom=30mm, headsep=8mm, footskip=12mm}
@@ -359,17 +143,6 @@ Science}}
 	\addcontentsline{toc}{chapter}{Table of figures}
 	\listoffigures
 
-	%tabellenverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{List of tables}
-	\listoftables
-
-	%Listingsverzeichnis
-	\clearpage
-	\addcontentsline{toc}{chapter}{Code listings}
-	\renewcommand{\lstlistlistingname}{Code listings}
-	\lstlistoflistings
-
 	\clearpage
 
 	%abstand im inhaltsverzeichnis
@@ -385,7 +158,6 @@ Science}}
 	\setcounter{page}{1}
 
 	%einleitung
-	\chapter{Introduction}\label{chp:Intr}
 	\input{chapter/1_introduction}
 
 	%anforderungsanalyse
@@ -433,4 +205,4 @@ Science}}
 %	\bibliography{literatur}
 
 \end{document}
->>>>>>> Stashed changes
+
