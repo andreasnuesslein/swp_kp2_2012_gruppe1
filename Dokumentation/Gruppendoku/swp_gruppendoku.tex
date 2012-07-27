@@ -24,11 +24,16 @@
 \usepackage{floatflt}
 \usepackage{geometry}
 \usepackage{pdfpages}
+\usepackage{prettyref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{wrapfig}
+\usepackage{abstract}
 
-%ränder anpassen
+%râ€°nder anpassen
 \geometry{a4paper, top=28mm, left=27mm, right=26mm, bottom=30mm, headsep=8mm, footskip=12mm}
 
-%farben für den text (listings definieren)
+%farben fÂ¸r den text (listings definieren)
 \definecolor{darkblue}{rgb}{0,0,.5}
 \definecolor{wine}{rgb}{0.53,0.047,0.047}
 \definecolor{lightgray}{rgb}{.2,.2,.2}
@@ -43,7 +48,7 @@
 \renewcommand{\lstlistingname}{Code listings}
 \lstset{
 	tabsize=2,
-	%kleine schriftgröße
+	%kleine schriftgrË†ï¬‚e
 	basicstyle=\footnotesize \bfseries\ttfamily,
 	keywordstyle=\color{wine},
 	identifierstyle=\mdseries \color{black},
@@ -88,7 +93,7 @@
 
 \begin{document}
 
-	%kopf- und fußzeilen
+	%kopf- und fuï¬‚zeilen
 	\setlength{\headheight}{28pt}
 	\pagestyle{fancy}
 	\fancyhf{}
@@ -100,7 +105,7 @@ Institute of Computer Science}}
 	\rfoot{\smallskip \thepage}
 	\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
 
-	%kopf und fußzeilen für alle seiten (auch inhalt und anhang)
+	%kopf und fuï¬‚zeilen fÂ¸r alle seiten (auch inhalt und anhang)
 	\fancypagestyle{plain}{
     \fancyhf{}
 		\lhead{Team 1}
@@ -116,7 +121,7 @@ Science}}
 	\newcommand{\emptyRow}{\medskip \noindent}
 
 
-	%römische bezifferung
+	%rË†mische bezifferung
 	\pagenumbering{Roman}
 	\setcounter{page}{0}
 
@@ -164,7 +169,7 @@ Science}}
 	\setcounter{page}{1}
 
 	%einleitung
-	\chapter{Introduction}\label{chp:Intr}
+	%\chapter{Introduction}\label{chp:Intr}
 	\input{chapter/1_introduction}
 
 	%anforderungsanalyse
@@ -188,7 +193,7 @@ Science}}
 	\input{chapter/6_prototype}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% LITERATURVERZEICHNIS & ANHÄNGE 
+%% LITERATURVERZEICHNIS & ANHÆ’NGE 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 	\clearpage
@@ -204,7 +209,7 @@ Science}}
 	%literaturverzeichnis
 %	\addcontentsline{toc}{chapter}{Literaturverzeichnis}
 	
-	%nicht-zitierte BibTeX-Einträge anzeigen
+	%nicht-zitierte BibTeX-Eintrâ€°ge anzeigen
 %	\def\btxmastthesis{Ausarbeitung}
 %	\def\btxvolumelong{Auflage}
 %	\def\btxandlong{und}
