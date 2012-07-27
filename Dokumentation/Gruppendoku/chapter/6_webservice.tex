@@ -1,27 +1,89 @@
 %webservice
-\subsection{Description}\label{ssec:WedDesc}
+\subsection{Prolog}\label{ssec:WebProlog}
 
-\includegraphics[width=16cm]{images/TaWusel_Web_Login.png}\label{img:WebLogin}
-blabla
+As we begun with the implementation of the beforehand planned paper-prototype, we researched what technology and which
+framework we should use.
+After some thoughts about which programming language we should choose, we did decide to use Scala, as it offers a wide range of
+interesting functionality, like functional programming or use of plain Java-code.
+With the programming language chosen, a big step had been done, but another big one was not yet done, as we did not know which
+framework we should use with Scala. As every member of the team did not have any experience in working with Scala, we did some
+research and tried what we thought could be a possible option. That way we could gain a little insight into the framework and how
+it works and what it has to offer. At this point in time we tried Play2.0(\url{http://www.playframework.org/}) and
+Lift(\url{http://liftweb.net/}). Due to its simplicity in programming and the efficiency of the written code, we decided to use
+Lift.\newline
+With these decisions done, the next step to go was to create a basic website and some basic functionality, as planned for the
+first iteration, in which we did plan on having some time to get friendly with a new framework and a new language.
+Half a week later, with a very busy weekend for every team member, we evaluated if Lift was indeed a good choice and if we are
+confident to be able to create a product as planned in the given time slot.
+Unfortunately we all had the same thoughts about Lift and came to the solution that it would be better if we would use Play2.0 as
+its use is not as complicated as it is with Lift. Lift is very efficient when it comes to written code and its results, but to
+understand what is going on in the framework, so that we could create a good product the way we want it to be, would have needed
+more time for familiarizing. But time was not that abundant, as we had a deadline every two weeks until which we had to have a
+presentable result.
+For that reason we did fall back onto Play2.0 and had to invest more time as planned for the first iteration as we were out of
+plan already without even having anything to use.
+
+\subsection{Description}\label{ssec:WebDesc}
+
+The TaWusel webservice consists only of a few pages, which are shown in the appendix and described as follows.
+During this project we did hit a deadline every two weeks, which led to a differing prototype every two weeks due to feedback at
+any presentation and testing. With this feedback we were able to crystallize the needs and wishes of the clients and therefore
+optimizing the product along with the clients wishes.\newline
+
+When you use our product the first time, you will see the welcome page(figure \ref{img:WebLogin}), which contains some brief
+features our product has to offer and of course you are able to login or register.\newline
 
 
-\includegraphics[width=16cm]{images/TaWusel_Web_main.png}\label{img:WebLogin}
+Once you are registered or have logged in, you will see our main page(figure \ref{img:WebMain}). Our main page is one big list
+separated into three parts. Each part of the list is marked by an underlying color that specifies the nature of the shown entry.
+\indent Green rows are the entries which have either been created by you, or which you have joined as other users did create these
+entries. If you are the one that created the our you will notice this as your name in the passengers column will be bold, as one
+person is needed for calling a taxi and obviously the most qualified for that task is the one who created the tour.\newline
+\indent Rows that are light blue are your personal favorites, which means, you have chosen these, at most 5 routes, more than any
+other route and therefore these will be shown for you, so that your are able to plan a tour with the same specifics with just
+two clicks.
+If you just registered and did not yet plan any tour, you will have five entries as well, but these 5 entries are not yet your
+personal favorites, they are just five beforehand chosen routes derived from the "FE-Taxilist", as these routes are said to
+be often used.\newline
+\indent And the last part of the main page are the white underlain rows. These are tours created by other users which you can
+join if you wish to do so.\newline
+
+If you now wish to create a new tour or to create one of your favorites as a new tour, you simply click the button at the end of
+the favorite-row or above the table and then a modal panel will pop up(figure \ref{img:WebCreate}). This panel allows you to
+choose the starting destination and the ending destination as well as the time the tour should start or end. These options are
+available for creating a new tour as well as for creating a favorite tour, which means you have to do two clicks for creating a
+favorite but if you want to take the same route as your favorite but another time then all you have to do is to change the time
+or date and this will save you time, as the destinations are already pre-chosen.\newline
+
+Up until now the main functionality has been described, and even though this is the most important part, we still have more to
+offer.
+Of course, if you are registered at our product you may want to change some of your given data at a specific point in time, for
+example when your "BIK" changes, your email-address or your phone number. To do so we offer you a profile page where that is
+possible. And due to as much simplicity as possible for the user we decided to use that same page for every data that is related
+to your account.\newline
+That said, what other data might be of interest for you as a user?\newline
+\indent For one, you should be able to decide on your own for which purpose you want our service to contact you and remind you of
+a planned tour or for someone joining or leaving your tour and of course in which manner this should happen. If you wish to be
+informed via email than you may choose this option and may leave the SMS-option blank or you may want to be contacted via SMS to
+your given mobile phone number.\newline
+\indent Another information that could come in very handy is a history that is been kept track of(figure \ref{img:WebHistory}).
+This history is keeping track of every tour you took part in and shows you every data for this tour, from the strating and ending
+destinations and the time and date over the status of that tour(if it was booked, cancelled or pending as it should have begun)
+and even who else took part in this tour.
+With these informations you can easily look up when did you take a taxi, where did you take a taxi and who else did take it with
+you. Very convenient if you do your invoice, especially as this prototype is extendable to send an email, containing all relevant
+data for your invoice, with just one click or to print that data or whatever you need.
+\indent As the figure \ref{img:WebHistory} shows, there is one other tab on the profile page, the favorites tab. There you can
+reset your favorites which accumulated over time. It helps you to always have personal favorites. For example if you have to take
+one tour for half a year three times a week, this tour has been done a lot of times and therefore would probably be your first
+favorite, if no other has been taken more often. But after that time you may never have to use that tour again, probably due to
+finishing the project, and now you have one of your five favorite slots filled with this one tour you may never have to take
+again, then it is probably a good choice to reset this specific favorite.\newline
+\indent These features describe our whole product and its features, and of course you are also able to logout.
+
+\subsection{Architecture}\label{ssec:WebArchitecture}
 
 
-
-\begin{figure}[h]
-	\includegraphics[width=16cm]{images/TaWusel_Web_create.png}
-	\caption{modal panel for creating a tour}
-	\label{img:WebLogin}
-\end{figure}
-
-
-
-\begin{figure}[h]
-	\includegraphics[width=16cm]{images/TaWusel_Web_history.png}
-	\caption{profile page - history tab}
-	\label{img:WebLogin}
-\end{figure}
 \subsection{Installation guide - Webservice}\label{ssec:WebInst}
 
 The rough install instructions can also be found in the \texttt{INSTALL.md} file.

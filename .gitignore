@@ -5,3 +5,8 @@
 *.snm
 *.toc
 .*.swp
+*.kilepr
+*.tex.kate-swp
+*.tex~
+*.tcp
+.gitignore~
